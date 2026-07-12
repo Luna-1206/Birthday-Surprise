@@ -27,7 +27,7 @@ function App() {
 
         const [currentPage, setCurrentPage] = useState(() => {
 
-          return localStorage.getItem("currentPage") === "intro";
+          return localStorage.getItem("currentPage") || "intro";
 
         });
 
@@ -36,6 +36,12 @@ function App() {
           localStorage.setItem("currentPage", currentPage);
 
         }, [currentPage]);
+
+        useEffect(() => {
+
+        window.history.scrollRestoration = "manual";
+
+        }, []);
 
   return (
     

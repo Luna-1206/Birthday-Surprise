@@ -17,6 +17,56 @@ function Landing() {
 
     <section className="landing">
 
+        <motion.button 
+
+                className = "resetButton"
+        
+                initial={{
+
+                    opacity: 0,
+
+                    y: 50
+
+                }}
+
+                animate={{
+
+                    opacity: 1,
+
+                    y: 0
+
+                }}
+
+                transition={{
+
+                    duration: 1.2,
+
+                    ease: "easeOut"
+
+                }}
+
+
+                onClick={() => {
+
+                localStorage.removeItem("currentPage");
+
+                 window.history.scrollRestoration = "manual";
+
+                 window.scrollTo({
+                     top: 0,
+                     behavior: "instant"
+                 });
+
+                window.location.reload();
+                
+            }}
+
+        >
+
+            Replay Intro
+
+        </motion.button>
+
       <motion.div 
       
       className="content"
@@ -95,24 +145,6 @@ function Landing() {
             <p>THE MOST SPECIAL DAY</p>
 
         </div>
-
-        <button 
-
-                className = "resetButton"
-        
-                onClick={() => {
-
-                localStorage.clear();
-
-                window.location.reload();
-                
-            }}
-
-        >
-
-            Replay Intro
-
-        </button>
 
       </motion.div>
 
