@@ -96,7 +96,7 @@ function Landing() {
 
         <h2 className="wabwab">
 
-            My Wabwab
+            Wabwab
 
         </h2>
 
