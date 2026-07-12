@@ -33,7 +33,7 @@ function Landing() {
 
                     opacity: 1,
 
-                    y: 0
+                    y:0
 
                 }}
 
