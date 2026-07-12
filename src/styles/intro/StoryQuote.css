@@ -1,0 +1,50 @@
+.storyQuote {
+
+    position: absolute;
+
+    top: 160%;
+
+    transform: translateX(-50%);
+
+    width: 80%;
+
+    max-width: 700px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-style: italic;
+
+    text-align: center;
+
+    line-height: 1.5;
+
+    letter-spacing: 2px;
+    
+    z-index: 10;
+
+    text-shadow: 
+
+    0 0 15px rgba(255, 215, 120, .4);
+
+}
+
+.storyQuote p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    color: #F6E7C8;
+
+    
+
+}
+
+.storyQuote strong {
+
+    font-size: 40px;
+
+    font-weight: 600;
+
+    color: #FFD86B;
+
+}

@@ -1,0 +1,78 @@
+/* ======================================
+   WHOLE CONTAINER
+====================================== */
+
+.particleContainer {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+}
+
+
+/* ======================================
+   SINGLE PARTICLE
+====================================== */
+
+.sparkle {
+
+    position: absolute;
+
+    bottom: -80px;
+
+    animation: floatSparkle linear infinite;
+
+    filter: drop-shadow(0 0 12px rgba(255, 210, 90, .9));
+}
+
+/* ======================================
+   FLOATING ANIMATION
+====================================== */
+
+@keyframes floatSparkle {
+
+    0% {
+
+        transform: 
+
+        translateY(0px)
+        rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+
+        opacity: .25;
+
+    }
+
+    50% {
+
+        transform: 
+        
+        translateY(-50vh)
+
+        rotate(90deg);
+    }
+
+    100% {
+
+        transform: 
+        
+        translateY(-110vh)
+        
+        rotate(180deg);
+
+        opacity: 0;
+
+    }
+
+}

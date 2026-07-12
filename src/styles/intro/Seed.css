@@ -1,0 +1,16 @@
+/* ====================================
+   SEED IMAGE
+==================================== */
+
+.seed {
+
+    width: 150px;
+
+    display: block;
+
+    user-select: none;
+
+    pointer-events: none;
+
+}
+

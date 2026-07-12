@@ -1,0 +1,18 @@
+.bud {
+
+    position: absolute;
+
+    width: 280px;
+
+    height: auto;
+
+    left: -58px;
+
+    bottom: -45px;
+
+    transform: translateX(-50%);
+
+    transform-origin: center bottom;
+
+    z-index: 5;
+}

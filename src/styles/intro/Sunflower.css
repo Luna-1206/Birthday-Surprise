@@ -1,0 +1,43 @@
+.sunflower {
+
+    position: absolute;
+
+    left: -58px;
+
+    bottom: -45px;
+
+    transform: translateX(-50%);
+
+    width: 280px;
+
+    z-index: 15;
+
+    animation: crackGlow 2s ease-in-out infinite;
+
+}
+
+@keyframes crackGlow {
+
+    0% {
+
+        filter: 
+        drop-shadow(0 0 10px rgba(255, 210, 80, .4));
+
+    }
+
+    50% {
+
+        filter: 
+        
+        drop-shadow(0 0 35px rgba(255, 210, 80, 1));
+        
+    }
+
+    100% {
+
+        filter: 
+        
+        drop-shadow(0 0 10px rgba(255, 210, 80, .4));
+        
+    }
+}

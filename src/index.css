@@ -1,0 +1,30 @@
+/*
+    Global styles.
+    Ito ang pinaka-base ng buong website.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+/*
+    Tinatanggal natin ang default browser spacing.
+*/
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+/*
+    Buong website font.
+*/
+
+body {
+
+  font-family: "Poppins", sans-serif;
+  
+}

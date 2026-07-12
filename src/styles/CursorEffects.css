@@ -1,0 +1,43 @@
+/* Hide default cursor */
+
+/* Hindi dapat maka-click ang hearts */
+
+.heartTrail,
+.heartSplash {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 99999;
+    
+    user-select: none;
+
+}
+
+/* Trail */
+
+.heartTrail {
+
+    color: #FF5C8A;
+
+    font-size: 14px;
+
+    text-shadow: 
+    
+        0 0 8px rgba(255, 92, 138, .45);
+
+}
+
+/* Splash */
+
+.heartSplash {
+
+    color: #FF5C8A;
+
+    font-size: 18px;
+
+    text-shadow: 
+    
+        0 0 12px rgba(255, 92, 138, .6);
+}

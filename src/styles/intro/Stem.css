@@ -1,0 +1,42 @@
+.stem {
+
+    position: absolute;
+
+    width: 200px;
+
+    height: auto;
+
+    bottom: -50px;
+
+    transform: translateX(-50%);
+
+    transform-origin: bottom center;
+
+    animation: crackGlow 2s ease-in-out infinite;
+}
+
+@keyframes crackGlow {
+
+    0% {
+
+        filter: 
+        drop-shadow(0 0 10px rgba(255, 210, 80, .4));
+
+    }
+
+    50% {
+
+        filter: 
+        
+        drop-shadow(0 0 35px rgba(255, 210, 80, 1));
+        
+    }
+
+    100% {
+
+        filter: 
+        
+        drop-shadow(0 0 10px rgba(255, 210, 80, .4));
+        
+    }
+}
