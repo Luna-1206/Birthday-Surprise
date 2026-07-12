@@ -245,7 +245,7 @@
 
     .heroDivider {
 
-        margin-top: 35px;
+        margin-top: 20px;
 
     }
 
@@ -263,6 +263,12 @@
         font-size: 11px;
 
         letter-spacing: 3px;
+
+    }
+
+    .heroDividerLine {
+
+        width: 200px;
 
     }
 
