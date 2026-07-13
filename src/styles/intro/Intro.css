@@ -283,6 +283,10 @@ button:hover {
 
     pointer-events: none;
 
+    position: absolute;
+
+    width: 100%;
+
 }
 
 @keyframes fadeAway {
