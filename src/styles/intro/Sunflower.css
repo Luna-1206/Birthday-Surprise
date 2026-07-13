@@ -4,6 +4,10 @@
 
     left: -58px;
 
+    pointer-events: none;
+
+    user-select: none;
+
     bottom: -45px;
 
     transform: translateX(-50%);
