@@ -2,11 +2,11 @@
 
     position: absolute;
 
-    top: 160%;
+    top: clamp(140%, 150%, 160%);
 
     transform: translateX(-50%);
 
-    width: 80%;
+    width: min(90vw, 700px);
 
     max-width: 700px;
 
@@ -29,6 +29,7 @@
 }
 
 .storyQuote p {
+
     font-family: "Cormorant Garamond", serif;
 
     font-size: 32px;
@@ -47,4 +48,30 @@
 
     color: #FFD86B;
 
+}
+
+@media (max-width: 768px) {
+
+    .storyQuote {
+
+        top: 130%;
+
+        width: 90%;
+
+    }
+
+    .storyQuote p {
+
+        font-size: 22px;
+
+        line-height: 1.5;
+
+    }
+
+    .storyQuote strong {
+
+        font-size: 28px;
+        
+    }
+    
 }
