@@ -116,7 +116,7 @@
 
     letter-spacing: clamp(2px, 1vw, 8px);
 
-    font-size: clamp(20px, 6vw, 45px);
+    font-size: clamp(15px, 6vw, 45px);
 
     margin-bottom: clamp(20px, 3vw, 40px);
 
