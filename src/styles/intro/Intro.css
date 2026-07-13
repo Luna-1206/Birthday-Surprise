@@ -466,7 +466,9 @@ button:hover {
 
     .finalMessage {
 
-        top: 10%;
+        top: 5%;
+
+        left: 50%;
 
         width: 92%;
 
@@ -491,7 +493,7 @@ button:hover {
     .introLabel {
 
         font-size: 25px;
-        
+
     }
 
 }
