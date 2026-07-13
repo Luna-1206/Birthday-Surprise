@@ -60,9 +60,11 @@
 
     align-items: center;
 
-    gap: 35px;
+    gap: clamp(18px, 4vw, 28px);
 
-    max-width: 900px;
+    width: min(92vw, 650px);
+
+    margin: auto;
 
     text-align: center;
 
@@ -72,31 +74,23 @@
 
    position: relative;
 
-   width: min(360px, 80vw);
+   width: min(88vw, 360px);
 
    aspect-ratio: 4 / 5;
 
    background: #ffffff;
-   
-   padding: 18px 18px 60px;
 
-   border-radius: 6px;
+   padding: 14px 14px 48px;
+
+   border-radius: 22px;
 
    box-shadow: 
    
-    0 25px 60px rgba(0, 0, 0, .18),
-    
-    0 8px 18px rgba(0, 0, 0, .08);
+    0 15px 45px rgba(0,0,0,.12);
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
+    transform:rotate(-2deg);
 
     overflow: hidden;
-
-    transform: rotate(-2deg);
 
     animation: floatPhoto 7s ease-in-out infinite;
 
@@ -191,9 +185,17 @@
 
 .photoScreen h2 {
 
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-family: "Cormorant Garamond", serif;
 
-    color: #8B1E1E;
+    font-size: clamp(3rem, 10vw, 5rem);
+
+    font-weight: 500;
+
+    color: #7B1E1E;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 10px;
 
 }
 

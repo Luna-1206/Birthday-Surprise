@@ -60,7 +60,11 @@
 
     height: 28px;
 
-    background: #F0D8A8;
+    background:
+
+      rgba(255,235,190,.85);
+
+        backdrop-filter:blur(4px);
 
     opacity: .9;
 
