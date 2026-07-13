@@ -1,0 +1,210 @@
+.timeline {
+
+    background: 
+    
+    radial-gradient(
+
+        circle at top,
+
+        #FFF8EE,
+
+        #F8F1E7 60%,
+
+        #EFE3D2
+        
+    );
+
+}
+
+.timelineScreen {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px;
+
+}
+
+.textScreen {
+
+    text-align: center;
+    
+}
+
+.textScreen h1 {
+
+    white-space: pre-line;
+
+    font-size: clamp(3rem, 8vw, 7rem);
+
+    color: #7B1E1E;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+}
+
+.photoScreen {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 35px;
+
+    max-width: 900px;
+
+    text-align: center;
+
+}
+
+.photoPlaceholder {
+
+   position: relative;
+
+   width: min(360px, 80vw);
+
+   aspect-ratio: 4 / 5;
+
+   background: #ffffff;
+
+   padding: 18px 18px 60px;
+
+   border-radius: 6px;
+
+   box-shadow: 
+   
+    0 25px 60px rgba(0, 0, 0, .18),
+    
+    0 8px 18px rgba(0, 0, 0, .08);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    transform: rotate(-2deg);
+
+    animation: floatPhoto 7s ease-in-out infinite;
+
+}
+
+@keyframes floatPhoto {
+
+    0% {
+
+        transform: 
+        
+        rotate(-2deg)
+        
+        translateY(0px);
+
+    }
+
+    50% {
+
+        transform: 
+        
+        rotate(-2deg)
+        
+        translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: 
+        
+        rotate(-2deg)
+        
+        translateY(0px);
+
+    }
+}
+
+.photoPlaceholder::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -12px;
+
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-4deg);
+
+    width: 95px;
+
+    height: 28px;
+
+    background: #EFD9A7;
+
+    opacity: .9;
+
+    border-radius: 3px;
+
+}
+
+.fakePhoto {
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 10px;
+
+    background:
+    
+    linear-gradient(
+
+        180deg,
+
+        #FCECC8,
+
+        #E6CBA8
+
+    );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 70px;
+
+}
+
+.photoScreen h2 {
+
+    font-size: clamp(2.5rem, 6vw, 4rem);
+
+    color: #8B1E1E;
+
+}
+
+.photoScreen p {
+
+    max-width: 650px;
+
+    font-size: 1.35rem;
+
+    color: #6A594A;
+
+    line-height: 1.8;
+
+}

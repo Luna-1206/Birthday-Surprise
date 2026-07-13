@@ -11,6 +11,8 @@ import song from "./assets/audio/terrified.mp3";
 import Intro from "./components/intro/Intro.jsx";
 import Landing from "./components/Landing.jsx";
 import CursorEffects from "./components/CursorEffects.jsx";
+import StickyNotes from "./components/story/StickyNotes.jsx";
+import Timeline from "./components/timeline/Timeline";
 
 // Ang App() ang pinaka-main component ng buong website.
 // Parang main class sa Java kung saan nagsisimula ang flow.
@@ -195,6 +197,8 @@ function App() {
         />
 
     }
+
+    <Timeline />
 
     <audio
 

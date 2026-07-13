@@ -1,0 +1,90 @@
+.polaroid {
+
+    position: relative;
+
+    width: min(360px, 80vw);
+
+    background-color: white;
+
+    padding: 18px 18px 55px;
+
+    border-radius: 6px;
+
+    box-shadow: 
+    
+        0 25px 60px rgba(0, 0, 0, .18),
+        
+        0 10px 30px rgba(0, 0, 0, .08);
+
+    animation: float 8s ease-in-out infinite;
+
+}
+
+.polaroid img {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+
+}
+
+.polaroid p {
+
+    margin-top: 18px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #7B1E1E;
+
+    font-size: 22px;
+
+}
+
+.tape {
+
+    position: absolute;
+
+    top: -12px;
+
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-5deg);
+
+    width: 95px;
+
+    height: 28px;
+
+    background: #F0D8A8;
+
+    opacity: .9;
+
+    border-radius: 3px;
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+        
+    }
+}
