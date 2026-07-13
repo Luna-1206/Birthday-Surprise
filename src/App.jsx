@@ -1,7 +1,9 @@
 // Import natin ang useState.
 // Ito ang ginagamit sa React para mag-store ng information
 // na nagbabago habang tumatakbo ang website.
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react";
+
+import song from "./assets/audio/terrified.mp3";
 
 // Import natin ang Landing component.
 // Hindi pa natin ito gagawin ngayon, pero ito ang magiging
@@ -24,6 +26,8 @@ function App() {
 
         boolean started = false;
     */
+
+        const audioRef = useRef(null);
 
         const [currentPage, setCurrentPage] = useState(() => {
 
@@ -60,6 +64,8 @@ function App() {
       ?
 
       <Intro
+
+      audioRef={audioRef}
       
       onStart={() => setCurrentPage("landing")}
 
@@ -70,6 +76,16 @@ function App() {
       <Landing />
 
     }
+
+    <audio
+
+      ref={audioRef}
+
+      src={song}
+
+      loop
+
+    />
       
     </>
   );

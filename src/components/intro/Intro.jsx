@@ -5,8 +5,6 @@ import { useState, useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
 
-import song from "../../assets/audio/terrified.mp3";
-
 // Import natin ang sariling CSS ng intro.
 import "../../styles/intro/Intro.css";
 
@@ -23,9 +21,7 @@ import SunflowerAnimation from "./SunflowerAnimation";
 
 // Ito ang unang screen na makikita ni Wabwab.
 
-function Intro({ onStart }) {
-  
-  const audioRef = useRef(null);
+function Intro({ onStart, audioRef }) {
   
   // ======================================
   // INTRO STAGES
@@ -528,16 +524,6 @@ function Intro({ onStart }) {
         </div>
 
       </div>
-
-      <audio
-      
-        ref={audioRef}
-
-        src={song}
-
-        loop
-
-      />
 
       {
 
