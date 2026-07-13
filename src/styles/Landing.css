@@ -185,7 +185,7 @@
 
 .resetButton {
 
-    position:fixed;
+    position: absolute;
 
     right:20px;
 
