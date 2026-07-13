@@ -466,9 +466,9 @@ button:hover {
 
     .finalMessage {
 
-        top: 50%;
+        top: 70%;
 
-        left: -10%;
+        left: 1%;
 
         transform: translateX(-50%);
 
