@@ -59,6 +59,8 @@
 
     font-size: 120px;
 
+    pointer-events: none;
+
     color: #8B1E1E;
 
     margin: 0;
@@ -76,6 +78,8 @@
     font-family: "Allura", cursive;
 
     margin: 30px 0;
+
+    pointer-events: none;
 
     font-weight: 800;
 
@@ -95,6 +99,8 @@
     font-family: Cambria;
 
     color: #6B5A49;
+
+    pointer-events: none;
 
     letter-spacing: 4px;
 
@@ -121,9 +127,13 @@
 
     color: #8A735A;
 
+    pointer-events: none;
+
 }
 
 .heroDivider p {
+
+    pointer-events: none;
 
     margin-top: 15px;
 
@@ -137,6 +147,8 @@
 .scrollIndicator {
 
     position:absolute;
+
+    pointer-events: none;
 
     bottom:80px;
 

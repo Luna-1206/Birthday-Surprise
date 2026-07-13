@@ -265,6 +265,10 @@ function Intro({ onStart }) {
 
         />
 
+        
+
+        </motion.div>
+
         {showFinalMessage && (
 
             <motion.div
@@ -296,12 +300,10 @@ function Intro({ onStart }) {
 
                 <p className="now">and now...</p>
 
-                <h2 className="time">it's your turn to bloom</h2>
+                <h2 className="time">it's your turn <br /> to bloom</h2>
 
             </motion.div>
         )}
-
-        </motion.div>
 
         {/* ===============================
             TYPEWRITER TEXT
