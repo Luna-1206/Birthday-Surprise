@@ -80,15 +80,15 @@
 
     align-items: center;
 
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Dancing Script", cursive;
 
-    font-size: 24px;
+    font-size: clamp(1.2rem,5vw,1.8rem);
 
     font-weight: 600;
 
     letter-spacing: 7px;
 
-    color: #8B1E1E;
+    color: #B88A4D;
 }
 
 @keyframes float {
