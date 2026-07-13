@@ -15,6 +15,8 @@ function TimelineScreen ({
     
     image,
 
+    date,
+
     year
 }) {
 
@@ -26,13 +28,57 @@ function TimelineScreen ({
 
         offset: [
 
-            "start end",
+            "start center",
 
-            "end start"
+            "center center"
 
         ]
 
     });
+
+    const titleOpacity = useTransform(
+
+        scrollYProgress,
+        [0, 0.25],
+        [0, 1]
+    );
+
+    const imageOpacity = useTransform(
+
+        scrollYProgress,
+        [0.25, 0.55],
+        [1.15, 1]
+    );
+
+    const imageScale = useTransform(
+
+        scrollYProgress,
+        [0.25, 0.55],
+        [1.15, 1]
+    );
+
+    const imageBlur = useTransform(
+    scrollYProgress,
+    [0.25,0.55],
+    [
+        "blur(12px)",
+        "blur(0px)"
+    ]
+);
+
+
+const dateOpacity = useTransform(
+    scrollYProgress,
+    [0.35,0.5],
+    [0,1]
+);
+
+
+const subtitleOpacity = useTransform(
+    scrollYProgress,
+    [0.45,0.65],
+    [0,1]
+);
 
     const opacity = useTransform(
 
@@ -54,6 +100,15 @@ function TimelineScreen ({
 
     );
 
+    const backgroundY = useTransform(
+
+        scrollYProgress,
+
+        [0,1],
+
+        [80, -80]
+    );
+
     return (
 
         <section
@@ -69,8 +124,7 @@ function TimelineScreen ({
                 className = "timelineContent"
 
                 style={{
-                    
-                    opacity,
+
 
                     y
 
@@ -89,23 +143,47 @@ function TimelineScreen ({
 
             }
 
-                <h2>
+                <motion.h2
+                
+                style={{
+
+                    opacity: titleOpacity
+
+                }}
+                
+                >
 
                     {title}
 
-                </h2>
+                </motion.h2>
 
                 {
 
                     image &&
 
-                    <Polaroid
+                    <motion.div
                     
-                        image = {image}
+                    style={{
 
-                        caption = {title}
+                        opacity: imageOpacity,
 
-                    />
+                        scale: imageScale,
+
+                        filter: imageBlur
+
+                    }}
+                    
+                    >
+
+                        <Polaroid
+                    
+                            image = {image}
+
+                            date = {date}
+
+                        />
+
+                    </motion.div>
 
                 }
 
@@ -113,11 +191,19 @@ function TimelineScreen ({
 
                     subtitle &&
 
-                    <p>
+                    <motion.p
+                    
+                        style={{
+
+                            opacity: subtitleOpacity
+
+                        }}
+
+                    >
 
                         {subtitle}
 
-                    </p>
+                    </motion.p>
                 }
 
             </motion.div>

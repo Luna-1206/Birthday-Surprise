@@ -6,7 +6,7 @@
 
     background-color: white;
 
-    padding: 18px 18px 55px;
+    padding: 18px 18px 30px;
 
     border-radius: 6px;
 
@@ -28,7 +28,7 @@
 
     object-fit: cover;
 
-    border-radius: 3px;
+    border-radius: 10px;
 
 }
 
@@ -66,6 +66,25 @@
 
     border-radius: 3px;
 
+}
+
+.polaroidDate {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    letter-spacing: 7px;
+
+    color: #8B1E1E;
 }
 
 @keyframes float {

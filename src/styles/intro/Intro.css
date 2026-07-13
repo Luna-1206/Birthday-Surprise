@@ -118,6 +118,10 @@
 
     font-size: clamp(15px, 6vw, 45px);
 
+    user-select: none;
+
+    pointer-events: none;
+
     margin-bottom: clamp(20px, 3vw, 40px);
 
     font-family: "Great Vibes", cursive;
@@ -197,6 +201,8 @@ button {
     border-radius: 50px;
 
     border: none;
+
+    user-select: none;
 
     background-color: #990000;
 

@@ -1,5 +1,7 @@
 import timelineData from "./TimelineData";
 
+import TimelineScreen from "./TimelineScreen";
+
 import firstPhoto from "../../assets/images/first.jpg";
 
 import Polaroid from "./Polaroid";
@@ -7,74 +9,30 @@ import Polaroid from "./Polaroid";
 import "../../styles/timeline/Timeline.css";
 
 function Timeline() {
+  return (
+    <section className="timeline">
 
-    return (
+      <TimelineScreen title="One ordinary day..." />
 
-      <section className="timeline">
+      <TimelineScreen title={"became\nthe most important day\nof my life."} />
 
-        {
+      <TimelineScreen
+        title="We met"
+        subtitle="And I didn't know that moment would change my life."
+        image={firstPhoto}
 
-            timelineData.map((item) => (
+        date ="10/9/2022❤️"
+      />
 
-                <section
-                    key={item.id}
-                    className="timelineScreen"
-                >
+      <TimelineScreen
+        title="We met"
+        subtitle="And I didn't know that moment would change my life."
+        image={firstPhoto}
 
-                    {
-
-                        item.type === "text"
-
-                        ?
-
-                        <div className="textScreen">
-
-                            <h1>
-                                
-                                {item.title}
-
-                            </h1>
-
-                        </div>
-
-                        :
-
-                        <div className="photoScreen">
-
-                           <Polaroid
-                           
-                                image={firstPhoto}
-
-                                caption = "10/9/2022 ❤️"
-
-                           />
-                                
-
-                            
-
-                            <h2>
-
-                                {item.title}
-
-                            </h2>
-
-                            <p>
-
-                                {item.subtitle}
-
-                            </p>
-
-                        </div>
-                        
-                    }
-
-                </section>
-            ))
-        }
-
-      </section>
-        
-    );
+        date ="10/9/2022❤️"
+      />
+    </section>
+  );
 }
 
 export default Timeline;

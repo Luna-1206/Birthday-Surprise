@@ -4,7 +4,7 @@ function Polaroid({
 
     image,
 
-    caption,
+    date,
 
     rotation = -2
 
@@ -30,13 +30,13 @@ function Polaroid({
                 
                 src={image} 
                 
-                alt={caption} 
+                alt="memory"
                 
                 />
 
-                <p>
+                <p className="polaroidDate">
 
-                    {caption}
+                    {date}
 
                 </p>
 

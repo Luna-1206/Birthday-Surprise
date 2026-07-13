@@ -1,6 +1,6 @@
 .timelineScreen {
 
-    min-height: 100vh;
+    min-height: 150vh;
 
     display: flex;
 
@@ -10,7 +10,68 @@
 
     position: relative;
 
+    z-index: 2;
+
     overflow: hidden;
 
     padding: 80px 20px;
+
+}
+
+.timelineContent {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 35px;
+    
+}
+
+.timelineContent h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    font-weight: 500;
+
+    color: #7B1E1E;
+
+    white-space: pre-line;
+
+}
+
+.timelineContent p{
+
+    max-width: 650px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-style: italic;
+
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+
+    line-height: 1.8;
+
+    color: #6A594A;
+
+}
+
+.timelineYear {
+
+    font-size: clamp(5rem, 15vw, 12rem)!important;
+
+    color: #8B1E1E;
+
+    letter-spacing: 10px;
+    
 }
