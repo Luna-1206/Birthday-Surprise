@@ -54,7 +54,7 @@
 
     .storyQuote {
 
-        top: 200%;
+        top: 180%;
 
         width: 90%;
 
@@ -62,7 +62,7 @@
 
     .storyQuote p {
 
-        font-size: 12px;
+        font-size: 20px;
 
         line-height: 1.5;
 
@@ -70,7 +70,7 @@
 
     .storyQuote strong {
 
-        font-size: 18px;
+        font-size: 24px;
 
     }
     

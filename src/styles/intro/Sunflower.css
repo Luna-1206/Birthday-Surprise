@@ -41,3 +41,11 @@
         
     }
 }
+
+@media (max-width: 768px) {
+
+    .sunflower {
+
+        left: -61px;
+    }
+}
