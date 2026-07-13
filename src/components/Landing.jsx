@@ -12,7 +12,7 @@ import "../styles/Landing.css";
 
 // Ito ang Landing component.
 // Ito ang magiging unang page na makikita niya.
-function Landing() {
+function Landing({ onReplay }) {
   return (
 
     <section className="landing">
@@ -20,6 +20,8 @@ function Landing() {
         <motion.button 
 
                 className = "resetButton"
+
+                onClick={onReplay}
         
                 initial={{
 
@@ -44,22 +46,6 @@ function Landing() {
                     ease: "easeOut"
 
                 }}
-
-
-                onClick={() => {
-
-                localStorage.removeItem("currentPage");
-
-                 window.history.scrollRestoration = "manual";
-
-                 window.scrollTo({
-                     top: 0,
-                     behavior: "instant"
-                 });
-
-                window.location.reload();
-                
-            }}
 
         >
 

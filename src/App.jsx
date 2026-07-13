@@ -29,6 +29,26 @@ function App() {
 
         const audioRef = useRef(null);
 
+        const replayIntro = () => {
+
+          // Stop music
+          if (audioRef.current) {
+
+            audioRef.current.pause();
+
+            audioRef.current.currentTime = 0;
+
+          }
+
+          // Clear saved music state
+          localStorage.removeItem("musicStarted");
+          localStorage.removeItem("musicTime");
+
+          // Go back to intro
+          setCurrentPage("intro");
+
+        }
+
         const [currentPage, setCurrentPage] = useState(() => {
 
           return localStorage.getItem("currentPage") || "intro";
@@ -168,7 +188,11 @@ function App() {
 
       :
 
-      <Landing />
+      <Landing 
+      
+          onReplay={replayIntro}
+        
+        />
 
     }
 
