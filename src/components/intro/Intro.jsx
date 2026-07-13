@@ -155,7 +155,10 @@ function Intro({ onStart }) {
             // Kapag click na
             // bababa siya ng 180px
 
-            y: isAnimating ? 180 : 0,
+            y: isAnimating 
+            
+                ? (window.innerWidth <= 768 ? 140 : 180)
+                : (window.innerWidth <= 768 ? -40 : 0),
 
             //Konting paglaki para maging focus
 
