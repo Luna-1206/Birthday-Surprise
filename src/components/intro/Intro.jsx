@@ -158,7 +158,7 @@ function Intro({ onStart }) {
             y: isAnimating 
             
                 ? (window.innerWidth <= 768 ? 140 : 50)
-                : (window.innerWidth <= 768 ? 10 : 0),
+                : (window.innerWidth <= 768 ? -50 : 0),
 
             //Konting paglaki para maging focus
 
