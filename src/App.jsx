@@ -190,15 +190,21 @@ function App() {
 
       :
 
+      <>
+
       <Landing 
       
           onReplay={replayIntro}
         
         />
 
+      <Timeline />
+
+      </>
+
     }
 
-    <Timeline />
+    
 
     <audio
 
