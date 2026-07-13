@@ -354,6 +354,8 @@ function Intro({ onStart, audioRef }) {
 
                                 audioRef.current.play();
 
+                                localStorage.setItem("musicStarted", "true");
+
                             } else {
 
                                 clearInterval(fadeAudio);

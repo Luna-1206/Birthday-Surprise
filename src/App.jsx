@@ -47,6 +47,101 @@ function App() {
 
         }, []);
 
+        useEffect(() => {
+
+          const interval = setInterval(() => {
+
+            if (audioRef.current) {
+
+              localStorage.setItem(
+                "musicTime",
+                audioRef.current.currentTime
+              );
+            }
+
+          }, 500);
+
+          return () => clearInterval(interval);
+
+        }, []);
+
+        useEffect(() => {
+
+          const audio = audioRef.current;
+
+          if (!audio) return;
+
+          const started = localStorage.getItem("musicStarted");
+
+          if (started !== "true") return;
+
+          const savedTime = Number(localStorage.getItem("musicTime") || 0);
+
+          const restore = async () => {
+
+            audio.currentTime = savedTime;
+
+            try {
+
+              await audio.play();
+
+            } catch (err) {
+
+              console.log("Autoplay blocked by browser.");
+
+            }
+          };
+
+          restore();
+
+        }, []);
+
+        useEffect(() => {
+
+    const resumeMusic = () => {
+
+        if (
+            localStorage.getItem("musicStarted") === "true"
+            &&
+            audioRef.current
+        ){
+
+            audioRef.current.play()
+            .then(() => {
+
+                console.log("Music resumed");
+
+                window.removeEventListener(
+                    "click",
+                    resumeMusic
+                );
+
+            })
+            .catch(() => {});
+
+        }
+
+    };
+
+
+    window.addEventListener(
+        "click",
+        resumeMusic
+    );
+
+
+    return () => {
+
+        window.removeEventListener(
+            "click",
+            resumeMusic
+        );
+
+    };
+
+
+  }, []);
+
   return (
     
 
