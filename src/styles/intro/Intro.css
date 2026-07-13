@@ -500,4 +500,16 @@ button:hover {
 
     }
 
+    button {
+
+        margin: 10px;
+
+        width: 200px;
+
+        font-size: 15px;
+
+        height: 50px;
+
+    }
+
 }
