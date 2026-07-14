@@ -99,6 +99,15 @@ const subtitleOpacity = useTransform(
 
     );
 
+    const backgroundY = useTransform(
+
+        scrollYProgress,
+
+        [0,1],
+
+        [80, -80]
+    );
+
     return (
 
         <section
