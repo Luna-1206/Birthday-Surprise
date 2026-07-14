@@ -367,6 +367,10 @@
 
         height: 400px;
 
+        padding: 20px;
+
+        background-color: black;
+
         filter: blur(2px);
 
         opacity: .6;
