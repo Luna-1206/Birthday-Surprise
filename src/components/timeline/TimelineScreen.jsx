@@ -27,9 +27,9 @@ function TimelineScreen ({
 
         offset: [
 
-            "start center",
+            "start 80%",
 
-            "center center"
+            "center 55%"
 
         ]
 
@@ -52,15 +52,16 @@ function TimelineScreen ({
     const imageScale = useTransform(
 
         scrollYProgress,
-        [0.25, 0.55],
-        [1.15, 1]
+        [0.15, 0.35],
+        [1.08, 1]
     );
 
     const imageBlur = useTransform(
     scrollYProgress,
-    [0.25,0.55],
+    [0.15,0.35],
+
     [
-        "blur(12px)",
+        "blur(8px)",
         "blur(0px)"
     ]
 );
