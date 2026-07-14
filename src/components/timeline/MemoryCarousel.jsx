@@ -10,11 +10,17 @@ function MemoryCarousel({ memories }) {
 
     const [expandedMemory, setExpandedMemory] = useState(null);
 
-    const previous =
+    const previous2 =
+        (current - 2 + memories.length) % memories.length;
+
+    const previous1 =
         (current - 1 + memories.length) % memories.length;
 
-    const next =
+    const next1 =
         (current + 1) % memories.length;
+
+    const next2 =
+        (current + 2) % memories.length;
 
     return (
 
@@ -22,15 +28,28 @@ function MemoryCarousel({ memories }) {
 
             <div className="carouselWrapper">
 
-                {/* Previous Card */}
-                <div className="memoryCard sideCard leftCard">
+            {/* Second Left Card */}
 
-                    <img
-                        src={memories[previous].image}
-                        alt={memories[previous].title}
-                    />
+            <div className="memoryCard secondLeft">
 
-                </div>
+                <img
+                    src={memories[previous2].image}
+                    alt={memories[previous2].title}
+                />
+
+            </div>
+
+
+            {/* First Left Card */}
+
+            <div className="memoryCard firstLeft">
+
+                <img
+                    src={memories[previous1].image}
+                    alt={memories[previous1].title}
+                />
+
+            </div>
 
 
                 {/* Left Arrow */}
@@ -101,13 +120,25 @@ function MemoryCarousel({ memories }) {
                 </button>
 
 
-                {/* Next Card */}
+                {/* First Right Card */}
 
-                <div className="memoryCard sideCard rightCard">
+                <div className="memoryCard firstRight">
 
                     <img
-                        src={memories[next].image}
-                        alt={memories[next].title}
+                        src={memories[next1].image}
+                        alt={memories[next1].title}
+                    />
+
+                </div>
+
+
+                {/* Second Right Card */}
+
+                <div className="memoryCard secondRight">
+
+                    <img
+                        src={memories[next2].image}
+                        alt={memories[next2].title}
                     />
 
                 </div>

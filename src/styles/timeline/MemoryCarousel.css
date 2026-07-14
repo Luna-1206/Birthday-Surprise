@@ -11,13 +11,15 @@
 
 .carouselWrapper {
 
+    position: relative;
+
     display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    gap: 20px;
+    height: 550px;
 
     width: 100%;
 
@@ -25,17 +27,18 @@
 
 .memoryCard {
 
-    background: white;
+    flex-shrink: 0;
+
+    position: absolute;
+
+    overflow: hidden;
 
     border-radius: 20px;
 
-    padding: 20px;
-
-    transition: .35s;
-
-    box-shadow: 
-    
-        0 12px 40px rgba(0, 0, 0, .12);
+    transition: 
+        transform .45s ease,
+        opacity .45s ease,
+        filter .45s ease;
 
 }
 
@@ -43,7 +46,13 @@
 
     position: relative;
 
+    height: 570px;
+
+    z-index: 5;
+
     cursor: pointer;
+
+    transform: translateX(0);
 
     width: 360px;
 
@@ -116,50 +125,119 @@
 
 }
 
-.sideCard {
-
-    width: 180px;
-
-    transform: scale(.82);
-
-    filter: blur(1px);
-
-    opacity: .35;
-
-    transition: .45s;
-}
-
-.leftCard {
-
-    transform:
-
-        perspective(900px)
-
-        rotateY(22deg)
-
-        scale(.88);
-
-}
-
-.rightCard {
-
-    transform:
-
-        perspective(900px)
-
-        rotateY(-22deg)
-
-        scale(.88);
-
-}
-
 .memoryCard img {
 
     width: 100%;
 
     border: 14px;
 
+    height: 100%;
+
+    object-fit: cover;
+
     border-radius: 5px;
+}
+
+.firstLeft,
+.firstRight {
+
+    width:360px;
+
+    height:480px;
+
+    opacity: .75;
+
+    filter: blur(.4px);
+
+    z-index:3;
+
+}
+
+
+.secondLeft,
+.secondRight {
+
+    width: 360px;
+
+    height: 480px;
+
+    opacity: .45;
+
+    filter: blur(1px);
+
+    z-index:2;
+
+}
+
+.firstLeft {
+
+    transform:
+
+        translateX(-370px)
+
+        perspective(800px)
+
+        rotateY(15deg)
+
+        scale(.92);
+
+    z-index:4;
+
+}
+
+
+.firstRight {
+
+    transform:
+
+        translateX(370px)
+
+        perspective(800px)
+
+        rotateY(-15deg)
+
+        scale(.92);
+
+    z-index:4;
+
+}
+
+.secondLeft {
+
+    transform:
+
+        translateX(-680px)
+
+        perspective(800px)
+
+        rotateY(25deg)
+
+        scale(.75);
+
+
+    z-index:3;
+
+    opacity:.45;
+
+}
+
+
+.secondRight {
+
+    transform:
+
+        translateX(680px)
+
+        perspective(800px)
+
+        rotateY(-25deg)
+
+        scale(.75);
+
+    z-index:3;
+
+    opacity:.45;
+
 }
 
 .carouselWrapper button {
@@ -266,8 +344,65 @@
 
 @media (max-width: 768px) {
 
+    .carouselWrapper {
+
+        height: 430px;
+
+        overflow: hidden;
+
+    }
+
     .currentCard {
 
-        width: 1000px;
+        width: 280px;
+
+        height: 400px;
+
+    }
+
+    .firstLeft,
+    .firstRight {
+
+        width: 230px;
+
+        height: 330px;
+
+        opacity: .6;
+
+    }
+
+    .firstLeft {
+
+        transform:
+
+            translateX(-170px)
+
+            perspective(800px)
+
+            rotateY(25deg)
+
+            scale(.85);
+
+    }
+
+    .firstRight {
+
+        transform:
+
+            translateX(170px)
+
+            perspective(800px)
+
+            rotateY(-25deg)
+
+            scale(.85);
+
+    }
+
+    .secondLeft,
+    .secondRight {
+
+        display:none;
+
     }
 }
