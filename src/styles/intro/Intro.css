@@ -190,7 +190,7 @@
 
 }
 
-button {
+.beginButton {
 
     width: clamp(220px, 45vw, 300px);
 
@@ -209,6 +209,8 @@ button {
     color: #FFFFFF;
 
     font-size: clamp(17px, 2vw, 22px);
+
+    font-family: 'Courier New', Courier, monospace;
     
     font-weight: 600;
 
@@ -232,7 +234,7 @@ button {
     Initially nasa labas siya.
 */
 
-button::before {
+.beginButton::before {
     
     content: "";
 
@@ -258,7 +260,7 @@ button::before {
     lalawak yung fill.
 */
 
-button:hover::before {
+.beginButton:hover::before {
 
     left: 0;
 
@@ -267,7 +269,7 @@ button:hover::before {
 /*
     Text color change kapag filled na.
 */
-button:hover {
+.beginButton:hover {
 
     color: #8b0000;
 
@@ -506,11 +508,11 @@ button:hover {
 
     }
 
-    button {
+    .beginButton {
 
         margin: 10px;
 
-        width: 200px;
+        width: 150px;
 
         font-size: 15px;
 

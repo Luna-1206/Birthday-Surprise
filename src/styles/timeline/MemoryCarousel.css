@@ -1,0 +1,200 @@
+.memoryCarousel {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 70px;
+}
+
+.carouselWrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    width: 100%;
+
+}
+
+.memoryCard {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    transition: .35s;
+
+    box-shadow: 
+    
+        0 12px 40px rgba(0, 0, 0, .12);
+
+}
+
+.currentCard {
+
+    position: relative;
+
+    cursor: pointer;
+
+    width: 360px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, .92);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, .18);
+
+}
+
+.currentCard:hover {
+
+    transform: translateY(-6px);
+
+    transition: .35s;
+}
+
+.currentCard:active {
+
+    transform: translateY(-2px);
+    
+}
+
+.sideCard {
+
+    width: 180px;
+
+    transform: scale(.82);
+
+    opacity: .45;
+}
+
+.memoryCard img {
+
+    width: 100%;
+
+    border: 14px;
+
+    border-radius: 5px;
+}
+
+.carouselWrapper button {
+
+    width: 46px;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+.memoryTitle {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    color: #7B1E1E;
+    
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+.memoryDividerCarousel {
+
+    width: 320px;
+
+    height: 1px;
+
+    background: rgba(123, 30, 30, .25);
+
+    margin-bottom: 20px;
+
+}
+
+.currentCard img {
+
+    width: 100%;
+
+    border-radius: 16px;
+
+    display: block;
+}
+
+.memoryDate {
+
+    margin-top: 16px;
+
+    color: #7B1E1E;
+
+    font-weight: 500;
+
+    letter-spacing: .5px;
+
+}
+
+.photoOverlay {
+
+    margin-top: 18px;
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    background: rgba(0, 0, 0, .05);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.photoOverlay:hover {
+    
+    background: rgba(0, 0, 0, .08);
+
+}
+
+.expandIcon {
+
+    font-size: 18px;
+
+    transition: .3s;
+
+}
