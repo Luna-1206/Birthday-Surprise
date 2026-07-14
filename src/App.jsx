@@ -101,7 +101,7 @@ function App() {
 
           const restore = async () => {
 
-            audio.currentTime = savedTime;
+            audio.currentTime = currentTime;
 
             try {
 
