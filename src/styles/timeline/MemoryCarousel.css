@@ -145,6 +145,17 @@
 
     height:480px;
 
+    padding: 30px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, .92);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, .18);
+
     opacity: .75;
 
     filter: blur(.4px);
@@ -162,6 +173,17 @@
     height: 480px;
 
     opacity: .45;
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, .92);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, .18);
 
     filter: blur(1px);
 
@@ -206,11 +228,11 @@
 
     transform:
 
-        translateX(-680px)
+        translateX(-710px)
 
         perspective(800px)
 
-        rotateY(25deg)
+        rotateY(-15deg)
 
         scale(.75);
 
@@ -226,11 +248,11 @@
 
     transform:
 
-        translateX(680px)
+        translateX(710px)
 
         perspective(800px)
 
-        rotateY(-25deg)
+        rotateY(15deg)
 
         scale(.75);
 
@@ -368,6 +390,17 @@
         height: 400px;
 
         padding: 20px;
+
+        padding: 30px;
+
+        border-radius: 24px;
+
+        background: rgba(255, 255, 255, .92);
+
+        backdrop-filter: blur(10px);
+
+        box-shadow: 
+            0 25px 60px rgba(0, 0, 0, .18);
 
         background-color: black;
 
