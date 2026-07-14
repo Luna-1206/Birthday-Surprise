@@ -8,6 +8,8 @@
 
     padding: 18px 18px 30px;
 
+    margin: 20px;
+
     border-radius: 6px;
 
     box-shadow: 
@@ -74,12 +76,8 @@
 
 .polaroidDate {
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
+    margin-top: 18px;
+    
     font-family: "Dancing Script", cursive;
 
     font-size: clamp(1.2rem,5vw,1.8rem);
@@ -88,7 +86,7 @@
 
     letter-spacing: 7px;
 
-    color: #B88A4D;
+    color: #967D5A;
 }
 
 @keyframes float {

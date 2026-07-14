@@ -19,6 +19,7 @@ function TimelineScreen ({
     date,
 
     year
+    
 }) {
 
     const ref = useRef(null);
@@ -178,6 +179,8 @@ const subtitleOpacity = useTransform(
 
             }
 
+                <div className="memoryDivider"></div>
+
                 <motion.h2
                 
                 style={{
@@ -193,6 +196,8 @@ const subtitleOpacity = useTransform(
                     {title}
 
                 </motion.h2>
+
+                <div className="memoryDivider"></div>
 
                 {
 
