@@ -64,11 +64,36 @@
     box-shadow: 
         0 25px 60px rgba(0, 0, 0, .18);
 
+    overflow: hidden;
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+.currentCard.expanded {
+
+    postion: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 9999;
+    
 }
 
 .currentCard:hover {
 
-    transform: translateY(-6px);
+    transform: translateY(-8px);
+
+    box-shadow:
+
+        0 30px 60px rgba(0, 0, 0, .18);
 
     transition: .35s;
 }
@@ -76,7 +101,7 @@
 .currentCard:active {
 
     transform: translateY(-2px);
-    
+
 }
 
 .sideCard {

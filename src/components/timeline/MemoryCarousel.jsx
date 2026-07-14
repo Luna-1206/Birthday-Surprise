@@ -1,10 +1,14 @@
 import { useState } from "react";
 
+import ExpandedMemory from "./ExpandedMemory";
+
 import "../../styles/timeline/MemoryCarousel.css";
 
 function MemoryCarousel({ memories }) {
 
     const [current, setCurrent] = useState(0);
+
+    const [expandedMemory, setExpandedMemory] = useState(null);
 
     const previous =
         (current - 1 + memories.length) % memories.length;
@@ -40,14 +44,10 @@ function MemoryCarousel({ memories }) {
 
                 {/* Current Card */}
 
-                <div className="memoryCard currentCard"
+                <div
                 
-                    className="memoryCard currentCard"
-                    onClick={() => {
-
-                        console.log("Expand Card");
-                        
-                    }}
+                    className={`memoryCard currentCard ${expandedMemory ? "expandedMemory" : ""}`}
+                    onClick={() => setExpandedMemory(memories[current]) }
 
                 >    
 
@@ -70,6 +70,7 @@ function MemoryCarousel({ memories }) {
 
                     </p>
 
+                    {/*
                     <div className="photoOverlay">
 
                         <span>
@@ -85,6 +86,8 @@ function MemoryCarousel({ memories }) {
                         </span>
                         
                     </div>
+
+                    */}
 
                 </div>
 
@@ -110,6 +113,23 @@ function MemoryCarousel({ memories }) {
                 </div>
 
             </div>
+
+            {
+                expandedMemory && (
+
+                    
+
+                    <ExpandedMemory
+                    
+                        memory={expandedMemory}
+
+                        onClose={() => setExpandedMemory(null)}
+
+                    />
+
+                    
+                )
+            }
 
         </div>
 
