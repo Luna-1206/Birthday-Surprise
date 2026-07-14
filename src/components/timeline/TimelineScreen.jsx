@@ -5,7 +5,6 @@ import { useRef } from "react";
 import Polaroid from "./Polaroid";
 
 import "../../styles/timeline/TimelineScreen.css";
-import { p } from "framer-motion/client";
 
 function TimelineScreen ({
 
@@ -132,6 +131,8 @@ const subtitleOpacity = useTransform(
 
             >
 
+                <div className="memoryPanel">
+
             {
                 year &&
 
@@ -191,6 +192,10 @@ const subtitleOpacity = useTransform(
 
                     subtitle &&
 
+                    <>
+
+                    <div className="memoryDivider"></div>
+
                     <motion.p
                     
                         style={{
@@ -204,7 +209,11 @@ const subtitleOpacity = useTransform(
                         {subtitle}
 
                     </motion.p>
+
+                    </>
                 }
+
+                </div>
 
             </motion.div>
 

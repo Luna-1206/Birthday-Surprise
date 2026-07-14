@@ -20,19 +20,15 @@
 
 .timelineContent {
 
-    position: relative;
-
-    z-index: 2;
-
     display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
 
     text-align: center;
 
-    gap: 35px;
+    align-items: center;
+
+    justify-content: center;
+    
+    width: 100%;
     
 }
 
@@ -74,4 +70,49 @@
 
     letter-spacing: 10px;
     
+}
+
+.memoryPanel {
+
+    position: relative;
+
+    width: min(94vw, 720px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    align-items: center;
+
+    margin: auto;
+
+    padding: clamp(30px, 5vw, 50px);
+
+    border-radius: 40px;
+
+    background: rgba(255, 255, 255, .25);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .35);
+
+    box-shadow: 
+    
+        0 25px 70px rgba(0, 0, 0, .08);
+
+}
+
+.memoryDivider {
+
+    width: 150px;
+
+    height: 2px;
+
+    background: #E7C98D;
+
+    border-radius: 999px;
+
+    margin: 18px auto;
 }
