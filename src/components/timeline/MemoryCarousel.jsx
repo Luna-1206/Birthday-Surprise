@@ -63,9 +63,13 @@ function MemoryCarousel({ memories }) {
 
                 {/* Current Card */}
 
+                {
+
+                    !expandedMemory && (
+
                 <div
                 
-                    className={`memoryCard currentCard ${expandedMemory ? "currentExpanded" : ""}`}
+                    className="memoryCard currentCard"
                     onPointerDown={(e) => {
                         
                         e.stopPropagation();
@@ -113,6 +117,9 @@ function MemoryCarousel({ memories }) {
                     */}
 
                 </div>
+                
+                        )
+                    }
 
 
                 {/* Right Arrow */}

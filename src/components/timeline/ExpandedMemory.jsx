@@ -10,8 +10,6 @@ function ExpandedMemory({ memory, onClose }) {
         
             className="backgroundBlur"
         
-            className="backgroundBlur"
-        
             onClick={onClose}
     
     ></div>

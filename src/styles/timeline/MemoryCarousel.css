@@ -87,29 +87,6 @@
 
 }
 
-.currentExpanded {
-
-    z-index: 200;
-
-    transform: scale(1.05);
-
-}
-
-.currentCard.currentExpanded {
-
-    position: fixed;
-
-    top: 50%;
-
-    left: 50%;
-
-    transform:
-        translate(-50%, -50%);
-
-    z-index: 9999;
-
-}
-
 .currentCard:hover:not(.currentExpanded) {
 
     transform: translateY(-8px);
