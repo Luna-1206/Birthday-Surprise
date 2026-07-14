@@ -12,6 +12,12 @@ function Timeline() {
   return (
     <section className="timeline">
 
+        <div className="timelineDecoration blob1"></div>
+
+        <div className="timelineDecoration blob2"></div>
+
+        <div className="timelineDecoration blob3"></div>
+
       <TimelineScreen title="One ordinary day..." />
 
       <TimelineScreen title={"became\nthe most important day\nof my life."} />

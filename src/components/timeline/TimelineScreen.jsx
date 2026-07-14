@@ -75,7 +75,7 @@ const dateOpacity = useTransform(
 
 const subtitleOpacity = useTransform(
     scrollYProgress,
-    [0.45,0.65],
+    [0.28,0.45],
     [0,1]
 );
 
