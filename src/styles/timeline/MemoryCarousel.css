@@ -367,6 +367,8 @@
 
         height: 400px;
 
+        filter: blur(2px);
+
         opacity: .6;
 
     }
