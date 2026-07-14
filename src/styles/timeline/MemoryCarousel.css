@@ -108,9 +108,13 @@
 
 }
 
-.currentCard:hover {
+.currentCard:hover:not(.currentExpanded) {
 
     transform: translateY(-8px);
+
+}
+
+.currentCard:hover {
 
     box-shadow:
 
@@ -388,8 +392,6 @@
         width: 230px;
 
         height: 400px;
-
-        padding: 20px;
 
         padding: 30px;
 
