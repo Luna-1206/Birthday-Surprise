@@ -23,7 +23,7 @@ function MemoryCarousel({ memories }) {
             <div className="carouselWrapper">
 
                 {/* Previous Card */}
-                <div className="memoryCard sideCard">
+                <div className="memoryCard sideCard leftCard">
 
                     <img
                         src={memories[previous].image}
@@ -46,7 +46,7 @@ function MemoryCarousel({ memories }) {
 
                 <div
                 
-                    className={`memoryCard currentCard ${expandedMemory ? "expandedMemory" : ""}`}
+                    className={`memoryCard currentCard ${expandedMemory ? "currentExpanded" : ""}`}
                     onClick={() => setExpandedMemory(memories[current]) }
 
                 >    
@@ -103,7 +103,7 @@ function MemoryCarousel({ memories }) {
 
                 {/* Next Card */}
 
-                <div className="memoryCard sideCard">
+                <div className="memoryCard sideCard rightCard">
 
                     <img
                         src={memories[next].image}

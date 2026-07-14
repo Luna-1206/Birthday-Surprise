@@ -4,8 +4,89 @@
 
     inset: 0;
 
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
     backdrop-filter: blur(12px);
 
     background: rgba(0, 0, 0, .45);
+
+    z-index: 9999;
+
+}
+
+.expandedContent {
+
+    position: relative;
+
+    width: min(92vw, 650px);
+
+    scrollbar-width: none;
+
+    text-align: center;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    box-shadow:
     
+        0 35px 80px rgba(0, 0, 0, .25);
+
+}
+
+.expandedContent img {
+
+    width: 100%;
+
+    border-radius: 18px;
+
+    display: block;
+
+    margin: 20px 0;
+
+}
+
+.backButton {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 7%;
+
+    padding: 10px;
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    color: #7B1E1E;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+.backButton:hover {
+
+    transform: translateY(-2px);
+
+}
+
+.backButton:active {
+
+    transform: translateY(1px);
 }

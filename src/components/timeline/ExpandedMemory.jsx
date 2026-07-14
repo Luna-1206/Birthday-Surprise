@@ -17,7 +17,7 @@ function ExpandedMemory({ memory, onClose }) {
 
                 >
 
-                     ← Back
+                     ←
 
                 </button>
 

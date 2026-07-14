@@ -67,14 +67,26 @@
     overflow: hidden;
 
     transition:
+
         transform .45s ease,
-        box-shadow .45s ease;
+        
+        box-shadow .45s ease,
+
+        opacity .35s ease;
 
 }
 
-.currentCard.expanded {
+.currentExpanded {
 
-    postion: fixed;
+    z-index: 200;
+
+    transform: scale(1.05);
+
+}
+
+.currentCard.currentExpanded {
+
+    position: fixed;
 
     top: 50%;
 
@@ -84,7 +96,7 @@
         translate(-50%, -50%);
 
     z-index: 9999;
-    
+
 }
 
 .currentCard:hover {
@@ -110,7 +122,35 @@
 
     transform: scale(.82);
 
-    opacity: .45;
+    filter: blur(1px);
+
+    opacity: .35;
+
+    transition: .45s;
+}
+
+.leftCard {
+
+    transform:
+
+        perspective(900px)
+
+        rotateY(22deg)
+
+        scale(.88);
+
+}
+
+.rightCard {
+
+    transform:
+
+        perspective(900px)
+
+        rotateY(-22deg)
+
+        scale(.88);
+        
 }
 
 .memoryCard img {
