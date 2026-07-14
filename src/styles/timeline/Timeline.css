@@ -10,17 +10,51 @@
 
         180deg,
 
-        #FFFDF9,
+        #FFFCFA 0%,
 
-        #FFF6EC 45%,
+        #FFF7F0 45%,
 
-        #FFF9F3
+        #FFFDFB 100%
         
     );
 
 }
 
 .timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+
+            circle
+
+            rgba(255, 214, 150, .35),
+
+            transparent 70%
+
+        );
+
+    top: -180px;
+
+    right: -150px;
+
+    filter: blur(80px);
+
+    pointer-events: none;
+
+}
+
+.timeline::after {
 
     content: "";
 
@@ -34,54 +68,24 @@
 
     background:
 
-        radial-gradient(
-
-            circle
-
-            rgba(255, 220, 160, .35),
-
-            transparent 70%
-
-        );
-
-    top: -120px;
-
-    right: -120px;
-
-    filter: blur(45px);
-
-}
-
-.timeline::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 280px;
-
-    height: 280px;
-
-    border-radius: 50%;
-
-    background:
-
     radial-gradient(
 
         circle,
 
-        rgba(255, 190, 210, .18),
+        rgba(255, 180, 195, .18),
 
         transparent 70%
 
     );
 
-    bottom: -120px;
+    bottom: -150px;
 
     left: -120px;
 
-    filter: blur(55px);
-    
+    filter: blur(90px);
+
+    pointer-events: none;
+
 }
 
 .timelineScreen {
@@ -94,7 +98,7 @@
 
     align-items: center;
 
-    padding: 60px;
+    padding: clamp(24px, 6vw, 80px);
 
 }
 
@@ -128,7 +132,7 @@
 
     align-items: center;
 
-    gap: clamp(18px, 4vw, 28px);
+    gap: 22px;
 
     width: min(92vw, 650px);
 
@@ -142,19 +146,25 @@
 
    position: relative;
 
-   width: min(88vw, 360px);
+   width: min(86vw, 340px);
 
    aspect-ratio: 4 / 5;
 
    background: #ffffff;
 
-   padding: 14px 14px 48px;
+   padding: 14px 14px 42px;
+
+   display: flex;
+
+   justify-content: center;
+
+   align-items: center;
 
    border-radius: 22px;
 
    box-shadow: 
    
-    0 15px 45px rgba(0,0,0,.12);
+    0 15px 40px rgba(0,0,0,.12);
 
     transform:rotate(-2deg);
 
@@ -263,17 +273,19 @@
 
     letter-spacing: -1px;
 
-    margin-bottom: 10px;
+    line-height: 1;
+
+    margin: 0;
 
 }
 
 .photoScreen p {
 
-    max-width: 500px;
+    max-width: 420px;
 
-    font-size: clamp(1rem, 4vw, 1.25rem);
+    font-size: clamp(1rem, 4vw, 1.2rem);
 
-    color: #6F655A;
+    color: #6A594A;
 
     line-height: 1.9;
 

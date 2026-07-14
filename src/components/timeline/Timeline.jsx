@@ -17,7 +17,7 @@ function Timeline() {
       <TimelineScreen title={"became\nthe most important day\nof my life."} />
 
       <TimelineScreen
-        title="We met"
+        title="We Met"
         subtitle="And I didn't know that moment would change my life."
         image={firstPhoto}
 
@@ -25,8 +25,8 @@ function Timeline() {
       />
 
       <TimelineScreen
-        title="We met"
-        subtitle="And I didn't know that moment would change my life."
+        title="We Stayed"
+        subtitle="Thank you for always choosing me."
         image={firstPhoto}
 
         date ="10/9/2022❤️"
