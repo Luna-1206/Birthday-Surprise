@@ -402,8 +402,6 @@
         box-shadow: 
             0 25px 60px rgba(0, 0, 0, .18);
 
-        background-color: black;
-
         filter: blur(2px);
 
         opacity: .6;
