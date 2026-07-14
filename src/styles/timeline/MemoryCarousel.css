@@ -150,7 +150,7 @@
         rotateY(-22deg)
 
         scale(.88);
-        
+
 }
 
 .memoryCard img {
@@ -262,4 +262,12 @@
 
     transition: .3s;
 
+}
+
+@media (max-width: 768px) {
+
+    .currentCard {
+
+        width: 1000px;
+    }
 }
