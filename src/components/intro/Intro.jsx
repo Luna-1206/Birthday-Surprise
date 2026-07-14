@@ -383,7 +383,7 @@ function Intro({ onStart, audioRef }) {
 
                         setShowSeedQuote(false);
 
-                    }, 7500);
+                    }, 5500);
 
 
                     setTimeout(() => {
@@ -392,25 +392,25 @@ function Intro({ onStart, audioRef }) {
 
                         setStage("crack");
 
-                    }, 8500);
+                    }, 6500);
 
                     setTimeout (() => {
 
                         setShowCrackQuote(true);
 
-                    }, 11000);
+                    }, 7500);
 
                     setTimeout(() => {
 
                         setShowCrackQuote(false);
 
-                    }, 16000);
+                    }, 11500);
 
                     setTimeout(() => {
 
                         setFlash(true);
 
-                    }, 16500);
+                    }, 12000);
 
                     setTimeout(() => {
 
@@ -418,61 +418,61 @@ function Intro({ onStart, audioRef }) {
 
                         setStage("sprout");
 
-                    }, 17000 );
+                    }, 12500 );
 
                     setTimeout(() => {
                         
                         setFlash(false);
 
-                    }, 18500 )
+                    }, 14000 )
 
                     setTimeout(() => {
 
                         setShowSproutQuote(true);
 
-                    }, 19500);
+                    }, 15000);
 
                     setTimeout(() => {
 
                         setShowSproutQuote(false);
 
-                    }, 24500);
+                    }, 20000);
 
                     setTimeout(() => {
 
                         setGrowStem(true);
 
-                    }, 25000);
+                    }, 20500);
 
                     setTimeout(() => {
 
                         setShowStemQuote(true);
 
-                    }, 27500);
+                    }, 23000);
 
                     setTimeout(() => {
 
                         setShowStemQuote(false);
 
-                    }, 32500);
+                    }, 28000);
 
                     setTimeout(() => {
 
                         setShowBud(true);
 
-                    }, 33000);
+                    }, 28500);
 
                     setTimeout(() => {
 
                         setShowBudQuote(true);
 
-                    }, 35500);
+                    }, 31000);
 
                     setTimeout(() => {
 
                         setShowBudQuote(false);
 
-                    }, 40500)
+                    }, 36000)
 
                     setTimeout(() => {
 
@@ -480,37 +480,37 @@ function Intro({ onStart, audioRef }) {
 
                         setShowSunflower(true);
 
-                    }, 43000);
+                    }, 36500);
 
                     setTimeout(() => {
 
                         setShowSunflowerQuote(true);
 
-                    }, 45500);
+                    }, 37500);
 
                     setTimeout(() => {
 
                         setShowSunflowerQuote(false);
 
-                    }, 52500);
+                    }, 42500);
 
                     setTimeout(() => {
 
                         setShowFinalMessage(true);
 
-                    }, 53500);
+                    }, 43000);
 
                     setTimeout(() => {
 
                         setCreamFlash(true);
 
-                    }, 59000);
+                    }, 45500);
 
                     setTimeout(() => {
 
                         onStart();
 
-                    }, 64000);
+                    }, 49500);
 
                 }}
 

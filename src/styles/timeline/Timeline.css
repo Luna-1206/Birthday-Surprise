@@ -1,19 +1,87 @@
 .timeline {
 
+    position: relative;
+
+    overflow: hidden;
+
     background: 
     
-    radial-gradient(
+    linear-gradient(
 
-        circle at top,
+        180deg,
 
-        #FFF8EE,
+        #FFFDF9,
 
-        #F8F1E7 60%,
+        #FFF6EC 45%,
 
-        #EFE3D2
+        #FFF9F3
         
     );
 
+}
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+
+            circle
+
+            rgba(255, 220, 160, .35),
+
+            transparent 70%
+
+        );
+
+    top: -120px;
+
+    right: -120px;
+
+    filter: blur(45px);
+
+}
+
+.timeline::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    border-radius: 50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(255, 190, 210, .18),
+
+        transparent 70%
+
+    );
+
+    bottom: -120px;
+
+    left: -120px;
+
+    filter: blur(55px);
+    
 }
 
 .timelineScreen {
