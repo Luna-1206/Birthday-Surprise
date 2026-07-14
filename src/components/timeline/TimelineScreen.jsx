@@ -2,6 +2,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import { useRef } from "react";
 
+import { useSpring } from "framer-motion";
+
 import Polaroid from "./Polaroid";
 
 import "../../styles/timeline/TimelineScreen.css";
@@ -21,43 +23,55 @@ function TimelineScreen ({
 
     const ref = useRef(null);
 
+    
+
     const { scrollYProgress } = useScroll({
         
         target: ref,
 
         offset: [
 
-            "start 80%",
+            "start 95%",
 
-            "center 55%"
+            "center center"
 
         ]
 
     });
 
+    const smoothProgress = useSpring(scrollYProgress, {
+
+        stiffness: 70,
+
+        damping: 20,
+
+        mass: 0.4
+
+    });
+
     const titleOpacity = useTransform(
 
-        scrollYProgress,
-        [0, 0.25],
+        smoothProgress,
+        [0, 0.45],
         [0, 1]
     );
 
     const imageOpacity = useTransform(
 
-        scrollYProgress,
-        [0.25, 0.55],
+        smoothProgress,
+        [0.25, 0.70],
         [1.15, 1]
     );
 
     const imageScale = useTransform(
 
-        scrollYProgress,
+        smoothProgress,
         [0.15, 0.35],
         [1.08, 1]
     );
 
     const imageBlur = useTransform(
-    scrollYProgress,
+    smoothProgress,
     [0.15,0.35],
 
     [
@@ -68,21 +82,21 @@ function TimelineScreen ({
 
 
 const dateOpacity = useTransform(
-    scrollYProgress,
+    smoothProgress,
     [0.35,0.5],
     [0,1]
 );
 
 
 const subtitleOpacity = useTransform(
-    scrollYProgress,
-    [0.28,0.45],
+    smoothProgress,
+    [0.55,0.85],
     [0,1]
 );
 
     const opacity = useTransform(
 
-        scrollYProgress,
+        smoothProgress,
 
         [0, .3, .7, 1],
 
@@ -92,7 +106,7 @@ const subtitleOpacity = useTransform(
 
     const y = useTransform(
 
-        scrollYProgress,
+        smoothProgress,
 
         [0, 1],
 
@@ -102,7 +116,7 @@ const subtitleOpacity = useTransform(
 
     const backgroundY = useTransform(
 
-        scrollYProgress,
+        smoothProgress,
 
         [0,1],
 
@@ -122,6 +136,13 @@ const subtitleOpacity = useTransform(
             <motion.div
             
                 className = "timelineContent"
+
+                style={{
+
+
+                    y
+
+                }}
 
             >
 
