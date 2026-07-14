@@ -6,6 +6,16 @@ function ExpandedMemory({ memory, onClose }) {
 
         <>
 
+        <div 
+        
+            className="backgroundBlur"
+        
+            className="backgroundBlur"
+        
+            onClick={onClose}
+    
+    ></div>
+
         <div className="expandedOverlay">
 
             <div className="expandedContent">
