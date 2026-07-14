@@ -66,7 +66,11 @@ function MemoryCarousel({ memories }) {
                 <div
                 
                     className={`memoryCard currentCard ${expandedMemory ? "currentExpanded" : ""}`}
-                    onClick={() => setExpandedMemory(memories[current]) }
+                    onPointerDown={(e) => {
+                        
+                        e.stopPropagation();
+
+                        setExpandedMemory(memories[current]) }}
 
                 >    
 
