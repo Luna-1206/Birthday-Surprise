@@ -368,6 +368,12 @@
 
 }
 
+.disabledCard {
+
+    pointer-events: none;
+    
+}
+
 @media (max-width: 768px) {
 
     .carouselWrapper {

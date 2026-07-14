@@ -30,7 +30,7 @@ function MemoryCarousel({ memories }) {
 
             {/* Second Left Card */}
 
-            <div className="memoryCard secondLeft">
+            <div className={`memoryCard secondLeft ${expandedMemory ? "disabledCard" : ""}`}>
 
                 <img
                     src={memories[previous2].image}
@@ -42,7 +42,7 @@ function MemoryCarousel({ memories }) {
 
             {/* First Left Card */}
 
-            <div className="memoryCard firstLeft">
+            <div className={`memoryCard firstLeft ${expandedMemory ? "disabledCard" : ""}`}>
 
                 <img
                     src={memories[previous1].image}
@@ -122,7 +122,7 @@ function MemoryCarousel({ memories }) {
 
                 {/* First Right Card */}
 
-                <div className="memoryCard firstRight">
+                <div className={`memoryCard firstRight ${expandedMemory ? "disabledCard" : ""}`}>
 
                     <img
                         src={memories[next1].image}
@@ -134,7 +134,7 @@ function MemoryCarousel({ memories }) {
 
                 {/* Second Right Card */}
 
-                <div className="memoryCard secondRight">
+                <div className={`memoryCard secondRight ${expandedMemory ? "disabledCard" : ""}`}>
 
                     <img
                         src={memories[next2].image}
