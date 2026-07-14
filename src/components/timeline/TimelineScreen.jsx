@@ -123,13 +123,6 @@ const subtitleOpacity = useTransform(
             
                 className = "timelineContent"
 
-                style={{
-
-
-                    y
-
-                }}
-
             >
 
                 <div className="memoryPanel">
