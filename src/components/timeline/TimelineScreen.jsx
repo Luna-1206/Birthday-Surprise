@@ -66,20 +66,39 @@ function TimelineScreen ({
     const imageScale = useTransform(
 
         smoothProgress,
-        [0.15, 0.35],
-        [1.08, 1]
+        [0.15, 0.45],
+        [1.03, 1]
     );
 
-    const imageBlur = useTransform(
-    smoothProgress,
-    [0.15,0.35],
+    const imageY = useTransform(
 
-    [
-        "blur(8px)",
-        "blur(0px)"
-    ]
-);
+        scrollYProgress,
 
+        [0.15, 0.45],
+
+        [50, 0]
+
+    );
+
+    const subtitleY = useTransform(
+
+        scrollYProgress,
+
+        [0.45, 0.75],
+
+        [30, 0]
+
+    );
+
+    const titleY = useTransform(
+
+        scrollYProgress,
+
+        [0, 0.3],
+
+        [40,0]
+
+    );
 
 const dateOpacity = useTransform(
     smoothProgress,
@@ -163,7 +182,9 @@ const subtitleOpacity = useTransform(
                 
                 style={{
 
-                    opacity: titleOpacity
+                    opacity: titleOpacity,
+
+                    y: titleY
 
                 }}
                 
@@ -185,7 +206,7 @@ const subtitleOpacity = useTransform(
 
                         scale: imageScale,
 
-                        //filter: imageBlur
+                        y: imageY
 
                     }}
                     
@@ -215,7 +236,9 @@ const subtitleOpacity = useTransform(
                     
                         style={{
 
-                            opacity: subtitleOpacity
+                            opacity: subtitleOpacity,
+
+                            y: subtitleY
 
                         }}
 
