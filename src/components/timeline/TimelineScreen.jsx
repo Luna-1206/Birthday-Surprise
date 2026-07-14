@@ -41,11 +41,11 @@ function TimelineScreen ({
 
     const smoothProgress = useSpring(scrollYProgress, {
 
-        stiffness: 70,
+        stiffness: 80,
 
-        damping: 20,
+        damping: 25,
 
-        mass: 0.4
+        mass: 0.5
 
     });
 
@@ -185,7 +185,7 @@ const subtitleOpacity = useTransform(
 
                         scale: imageScale,
 
-                        filter: imageBlur
+                        //filter: imageBlur
 
                     }}
                     
