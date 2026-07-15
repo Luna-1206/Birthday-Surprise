@@ -1175,4 +1175,215 @@
     z-index:2;
 
     }
+
+    /* =====================
+   MOBILE COVER FLOW ANIMATION
+===================== */
+
+
+@keyframes secondRightToFirstRight {
+
+    from {
+
+        transform:
+            perspective(800px)
+            translateX(300px)
+            rotateY(15deg)
+            scale(.65);
+
+    }
+
+    to {
+
+        transform:
+            perspective(800px)
+            translateX(145px)
+            rotateY(-20deg)
+            scale(.82);
+
+    }
+
+}
+
+
+
+@keyframes moveFirstRightNext {
+
+    from {
+
+        transform:
+            perspective(800px)
+            translateX(145px)
+            rotateY(-20deg)
+            scale(.82);
+
+    }
+
+    to {
+
+        transform:
+            perspective(800px)
+            translateX(0)
+            rotateY(0deg)
+            scale(1);
+
+    }
+
+}
+
+
+
+@keyframes moveCurrentNext {
+
+    from {
+
+        transform:
+            perspective(800px)
+            translateX(0)
+            rotateY(0deg)
+            scale(1);
+
+    }
+
+    to {
+
+        transform:
+            perspective(800px)
+            translateX(-145px)
+            rotateY(20deg)
+            scale(.82);
+
+    }
+
+}
+
+
+
+@keyframes moveFirstLeftNext {
+
+    from {
+
+        transform:
+            perspective(800px)
+            translateX(-145px)
+            rotateY(20deg)
+            scale(.82);
+
+    }
+
+    to {
+
+        transform:
+            perspective(800px)
+            translateX(-300px)
+            rotateY(-15deg)
+            scale(.65);
+
+    }
+
+}
+
+@keyframes secondLeftPrev {
+
+    from {
+
+        transform:
+            perspective(800px)
+            translateX(-300px)
+            rotateY(-15deg)
+            scale(.65);
+
+    }
+
+    to {
+
+        transform:
+            perspective(800px)
+            translateX(-145px)
+            rotateY(20deg)
+            scale(.82);
+
+    }
+
+}
+
+
+
+@keyframes firstLeftPrev {
+
+    from {
+
+        transform:
+            perspective(800px)
+            translateX(-145px)
+            rotateY(20deg)
+            scale(.82);
+
+    }
+
+    to {
+
+        transform:
+            perspective(800px)
+            translateX(0)
+            rotateY(0deg)
+            scale(1);
+
+    }
+
+}
+
+
+
+@keyframes currentPrev {
+
+    from {
+
+        transform:
+            perspective(800px)
+            translateX(0)
+            rotateY(0deg)
+            scale(1);
+
+    }
+
+    to {
+
+        transform:
+            perspective(800px)
+            translateX(145px)
+            rotateY(-20deg)
+            scale(.82);
+
+    }
+
+}
+
+
+
+@keyframes firstRightPrev {
+
+    from {
+
+        transform:
+            perspective(800px)
+            translateX(145px)
+            rotateY(-20deg)
+            scale(.82);
+
+    }
+
+    to {
+
+        transform:
+            perspective(800px)
+            translateX(300px)
+            rotateY(15deg)
+            scale(.65);
+
+    }
+
+}
+
+    
 }
