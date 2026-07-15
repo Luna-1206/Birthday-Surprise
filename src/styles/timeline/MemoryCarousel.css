@@ -1082,6 +1082,12 @@
 
 @media (max-width: 768px) {
 
+    .memoryCarousel {
+
+        margin: 0;
+        
+    }
+
     .carouselWrapper {
 
         height: 500px;
