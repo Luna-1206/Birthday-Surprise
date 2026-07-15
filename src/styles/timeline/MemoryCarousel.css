@@ -389,6 +389,19 @@
 
 }
 
+.animateCarousel.moving .firstLeft {
+
+    transform-origin: center right;
+
+}
+
+
+.animateCarousel.moving .firstRight {
+
+    transform-origin: center left;
+
+}
+
 .animateCarousel.next .memoryCard,
 .animateCarousel.prev .memoryCard{
 
@@ -1109,7 +1122,7 @@
 
         transform:
 
-            translateX(-145px)
+            translateX(-170px)
 
         perspective(800px)
 
@@ -1123,7 +1136,7 @@
 
         transform:
 
-            translateX(145px)
+            translateX(170px)
 
         perspective(800px)
 
@@ -1154,7 +1167,7 @@
 
     transform:
 
-        translateX(-300px)
+        translateX(-360px)
 
         perspective(800px)
 
@@ -1170,7 +1183,7 @@
 
     transform:
 
-        translateX(300px)
+        translateX(360px)
 
         perspective(800px)
 
