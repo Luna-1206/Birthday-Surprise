@@ -1122,11 +1122,11 @@
 
         transform:
 
-            translateX(-170px)
+            translateX(-250px)
 
         perspective(800px)
 
-        rotateY(20deg)
+        rotateY(15deg)
 
         scale(.88);
 
@@ -1136,11 +1136,11 @@
 
         transform:
 
-            translateX(170px)
+            translateX(250px)
 
         perspective(800px)
 
-        rotateY(-20deg)
+        rotateY(-15deg)
 
         scale(.88);
 
