@@ -9,6 +9,7 @@
     margin-top: 70px;
 }
 
+
 .carouselWrapper {
 
     position: relative;
@@ -268,7 +269,7 @@
 
     cursor: pointer;
 
-    font-size: 34px;
+    font-size: 40px;
 
     transition:
         transform .25s ease,
