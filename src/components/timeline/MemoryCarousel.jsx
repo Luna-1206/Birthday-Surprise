@@ -228,7 +228,7 @@ function MemoryCarousel({ memories }) {
                 
                     className={`memoryCard ${slots[2].className}`}
 
-                    onPointerDown={(e) => {
+                    onClick={(e) => {
                         
                         e.stopPropagation();
 
