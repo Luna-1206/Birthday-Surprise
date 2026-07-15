@@ -115,11 +115,15 @@ function MemoryCarousel({ memories }) {
 
             setDisplayCurrent(newCurrent);
 
-            setAnimatingSlots(false);
+            requestAnimationFrame(() => {
 
-            setDirection("");
+                setAnimatingSlots(false);
 
-            setIsAnimating(false);
+                setDirection("");
+
+                setIsAnimating(false);
+
+            });     
 
         }, 450);
     };
