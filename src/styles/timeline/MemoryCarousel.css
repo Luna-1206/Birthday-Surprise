@@ -1234,8 +1234,8 @@
     from {
 
         transform:
-            perspective(800px)
             translateX(220px)
+            perspective(800px)
             rotateY(-20deg)
             scale(.88);
 
@@ -1244,8 +1244,8 @@
     to {
 
         transform:
-            perspective(800px)
             translateX(0)
+            perspective(800px)
             rotateY(0deg)
             scale(1);
 
@@ -1260,8 +1260,8 @@
     from {
 
         transform:
-            perspective(800px)
             translateX(0)
+            perspective(800px)
             rotateY(0deg)
             scale(1);
 
@@ -1270,8 +1270,8 @@
     to {
 
         transform:
-            perspective(800px)
             translateX(-220px)
+            perspective(800px)
             rotateY(20deg)
             scale(.88);
 
@@ -1361,8 +1361,8 @@
     from {
 
         transform:
-            perspective(800px)
             translateX(0)
+            perspective(800px)
             rotateY(0deg)
             scale(1);
 
@@ -1371,8 +1371,8 @@
     to {
 
         transform:
-            perspective(800px)
             translateX(220px)
+            perspective(800px)
             rotateY(-20deg)
             scale(.88);
 
