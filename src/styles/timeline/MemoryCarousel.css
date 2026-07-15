@@ -35,6 +35,8 @@
 
     border-radius: 20px;
 
+    will-change: transform, opacity;
+
     transition: 
         transform .55s cubic-bezier(.22, .61, .36, 1),
         opacity .45s ease,
@@ -381,6 +383,680 @@
 
 }
 
+.animateCarousel.next .memoryCard,
+.animateCarousel.prev .memoryCard{
+
+    transition:
+        transform .45s cubic-bezier(.22,.61,.36,1),
+        opacity .45s ease;
+
+}
+
+/* NEXT ANIMATION */
+
+.animateCarousel.next .secondRight {
+
+    animation: moveSecondRightNext .45s ease forwards;
+
+}
+
+.animateCarousel.next .firstRight {
+
+    animation: moveFirstRightNext .45s ease forwards;
+
+}
+
+.animateCarousel.next .currentCard {
+
+    animation: moveCurrentNext .45s ease forwards;
+
+}
+
+.animateCarousel.next .firstLeft {
+
+    animation: moveFirstLeftNext .45s ease forwards;
+
+}
+
+
+/* PREVIOUS ANIMATION */
+
+.animateCarousel.prev .secondLeft {
+
+    animation: moveSecondLeftPrev .45s ease forwards;
+
+}
+
+.animateCarousel.prev .firstLeft {
+
+    animation: moveFirstLeftPrev .45s ease forwards;
+
+}
+
+.animateCarousel.prev .currentCard {
+
+    animation: moveCurrentPrev .45s ease forwards;
+
+}
+
+.animateCarousel.prev .firstRight {
+
+    animation: moveFirstRightPrev .45s ease forwards;
+
+}
+
+/* Incoming card hidden outside */
+
+.incomingRight {
+
+    width:360px;
+
+    height:480px;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.18);
+
+    opacity:.45;
+
+    filter:blur(1px);
+
+    transform:
+
+        translateX(1050px)
+
+        perspective(800px)
+
+        rotateY(15deg)
+
+        scale(.75);
+
+    z-index:1;
+
+}
+
+.animateCarousel.next .secondLeft {
+
+    animation: secondLeftExit .45s ease forwards;
+
+}
+
+
+@keyframes secondLeftExit {
+
+    from {
+
+        transform:
+
+            translateX(-710px)
+
+            perspective(800px)
+
+            rotateY(-15deg)
+
+            scale(.75);
+
+        opacity:.45;
+
+    }
+
+
+    to {
+
+        transform:
+
+            translateX(1050px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.75);
+
+        opacity:0;
+
+    }
+
+}
+
+.animateCarousel.next .secondRight {
+
+    animation: secondRightToFirstRight .45s ease forwards;
+
+}
+
+
+@keyframes secondRightToFirstRight {
+
+    from {
+
+        transform:
+
+            translateX(710px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.75);
+
+    }
+
+
+    to {
+
+        transform:
+
+            translateX(370px)
+
+            perspective(800px)
+
+            rotateY(-15deg)
+
+            scale(.92);
+
+    }
+
+}
+
+
+/* Papasok sa secondRight */
+
+.incomingRight.next {
+
+    animation: incomingNext .45s ease forwards;
+
+}
+
+.incomingLeft {
+
+    width:360px;
+
+    height:480px;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.18);
+
+    opacity:.45;
+
+    filter:blur(1px);
+
+    transform:
+
+        translateX(-1050px)
+
+        perspective(800px)
+
+        rotateY(-15deg)
+
+        scale(.75);
+
+    z-index:1;
+
+}
+
+
+.incomingLeft.prev {
+
+    animation: incomingPrev .45s ease forwards;
+
+}
+
+.animateCarousel.prev .secondRight {
+
+    animation: secondRightExitPrev .45s ease forwards;
+
+}
+
+/* =========================
+   PREVIOUS ANIMATION
+========================= */
+
+
+/* 2nd Right exits */
+
+.animateCarousel.prev .secondRight {
+
+    animation: secondRightPrev .45s ease forwards;
+
+}
+
+
+@keyframes secondRightPrev {
+
+    from {
+
+        transform:
+
+            translateX(710px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.75);
+
+        opacity:.45;
+
+    }
+
+
+    to {
+
+        transform:
+
+            translateX(1050px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.75);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/* First Right becomes Second Right */
+
+.animateCarousel.prev .firstRight {
+
+    animation: firstRightPrev .45s ease forwards;
+
+}
+
+
+@keyframes firstRightPrev {
+
+    from {
+
+        transform:
+
+            translateX(370px)
+
+            perspective(800px)
+
+            rotateY(-15deg)
+
+            scale(.92);
+
+    }
+
+
+    to {
+
+        transform:
+
+            translateX(710px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.75);
+
+    }
+
+}
+
+
+
+/* Current becomes First Right */
+
+.animateCarousel.prev .currentCard {
+
+    animation: currentPrev .45s ease forwards;
+
+}
+
+
+@keyframes currentPrev {
+
+    from {
+
+        transform:
+
+            translateX(0)
+
+            scale(1);
+
+    }
+
+
+    to {
+
+        transform:
+
+            translateX(370px)
+
+            perspective(800px)
+
+            rotateY(-15deg)
+
+            scale(.92);
+
+    }
+
+}
+
+
+
+/* First Left becomes Current */
+
+.animateCarousel.prev .firstLeft {
+
+    animation: firstLeftPrev .45s ease forwards;
+
+}
+
+
+@keyframes firstLeftPrev {
+
+    from {
+
+        transform:
+
+            translateX(-370px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.92);
+
+    }
+
+
+    to {
+
+        transform:
+
+            translateX(0)
+
+            scale(1);
+
+    }
+
+}
+
+
+
+/* Second Left becomes First Left */
+
+.animateCarousel.prev .secondLeft {
+
+    animation: secondLeftPrev .45s ease forwards;
+
+}
+
+
+@keyframes secondLeftPrev {
+
+    from {
+
+        transform:
+
+            translateX(-710px)
+
+            perspective(800px)
+
+            rotateY(-15deg)
+
+            scale(.75);
+
+        opacity:.45;
+
+    }
+
+
+    to {
+
+        transform:
+
+            translateX(-370px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.92);
+
+        opacity:.75;
+
+    }
+
+}
+
+
+@keyframes secondRightExitPrev {
+
+    from {
+
+        transform:
+
+            translateX(710px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.75);
+
+    }
+
+
+    to {
+
+        transform:
+
+            translateX(1050px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.75);
+
+        opacity:0;
+
+    }
+
+}
+
+
+@keyframes incomingPrev {
+
+    from {
+
+        transform:
+
+            translateX(-1050px)
+
+            perspective(800px)
+
+            rotateY(-15deg)
+
+            scale(.75);
+
+    }
+
+    to {
+
+        transform:
+
+            translateX(-710px)
+
+            perspective(800px)
+
+            rotateY(-15deg)
+
+            scale(.75);
+
+    }
+
+}
+
+
+@keyframes incomingNext {
+
+
+    from {
+
+        transform:
+
+            translateX(1050px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.75);
+
+    }
+
+
+    to {
+
+        transform:
+
+            translateX(710px)
+
+            perspective(800px)
+
+            rotateY(15deg)
+
+            scale(.75);
+
+    }
+
+}
+
+/* ========================= */
+/* NEXT COVER FLOW MOVEMENT */
+/* ========================= */
+
+
+@keyframes moveSecondRightNext {
+
+    from {
+
+        transform:
+            translateX(710px)
+            perspective(800px)
+            rotateY(15deg)
+            scale(.75);
+
+    }
+
+    to {
+
+        transform:
+            translateX(370px)
+            perspective(800px)
+            rotateY(-15deg)
+            scale(.92);
+
+    }
+
+}
+
+
+
+@keyframes moveFirstRightNext {
+
+    from {
+
+        transform:
+            translateX(370px)
+            perspective(800px)
+            rotateY(-15deg)
+            scale(.92);
+
+    }
+
+    to {
+
+        transform:
+            translateX(0)
+            perspective(800px)
+            rotateY(0deg)
+            scale(1);
+
+    }
+
+}
+
+
+
+@keyframes moveCurrentNext {
+
+    from {
+
+        transform:
+            translateX(0)
+            perspective(800px)
+            rotateY(0deg)
+            scale(1);
+
+    }
+
+    to {
+
+        transform:
+            translateX(-370px)
+            perspective(800px)
+            rotateY(15deg)
+            scale(.92);
+
+    }
+
+}
+
+
+
+@keyframes moveFirstLeftNext {
+
+    from {
+
+        transform:
+            translateX(-370px)
+            perspective(800px)
+            rotateY(15deg)
+            scale(.92);
+
+    }
+
+    to {
+
+        transform:
+            translateX(-710px)
+            perspective(800px)
+            rotateY(-15deg)
+            scale(.75);
+
+    }
+
+}
+
 @media (max-width: 768px) {
 
     .carouselWrapper {
@@ -427,13 +1103,13 @@
 
         transform:
 
-            translateX(-170px)
+            translateX(-145px)
 
-            perspective(800px)
+        perspective(800px)
 
-            rotateY(25deg)
+        rotateY(20deg)
 
-            scale(.85);
+        scale(.82);
 
     }
 
@@ -441,20 +1117,62 @@
 
         transform:
 
-            translateX(170px)
+            translateX(145px)
 
-            perspective(800px)
+        perspective(800px)
 
-            rotateY(-25deg)
+        rotateY(-20deg)
 
-            scale(.85);
+        scale(.82);
 
     }
 
     .secondLeft,
     .secondRight {
 
-        display:none;
+        width: 160px;
+
+        height: 300px;
+
+        padding: 15px;
+
+        border-radius: 20px;
+
+        opacity: .35;
+
+        filter: blur(1px);
+
+    }
+
+    .secondLeft {
+
+    transform:
+
+        translateX(-300px)
+
+        perspective(800px)
+
+        rotateY(-15deg)
+
+        scale(.65);
+
+    z-index:2;
+
+    }
+
+    .secondRight {
+
+    transform:
+
+        translateX(300px)
+
+        perspective(800px)
+
+        rotateY(15deg)
+
+        scale(.65);
+
+    z-index:2;
 
     }
 }
