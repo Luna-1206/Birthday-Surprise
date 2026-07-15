@@ -1008,7 +1008,7 @@
     from {
 
         transform:
-            translateX(370px)
+            translateX(220px)
             perspective(800px)
             rotateY(-15deg)
             scale(.92);
@@ -1125,7 +1125,7 @@
 
         transform:
 
-            translateX(-170px)
+            translateX(-220px)
 
         perspective(800px)
 
@@ -1139,7 +1139,7 @@
 
         transform:
 
-            translateX(170px)
+            translateX(220px)
 
         perspective(800px)
 
@@ -1209,7 +1209,7 @@
 
         transform:
             perspective(800px)
-            translateX(300px)
+            translateX(360px)
             rotateY(15deg)
             scale(.72);
 
@@ -1219,7 +1219,7 @@
 
         transform:
             perspective(800px)
-            translateX(145px)
+            translateX(220px)
             rotateY(-20deg)
             scale(.88);
 
@@ -1235,9 +1235,9 @@
 
         transform:
             perspective(800px)
-            translateX(145px)
+            translateX(220px)
             rotateY(-20deg)
-            scale(.82);
+            scale(.88);
 
     }
 
@@ -1271,7 +1271,7 @@
 
         transform:
             perspective(800px)
-            translateX(-145px)
+            translateX(-220px)
             rotateY(20deg)
             scale(.88);
 
@@ -1287,7 +1287,7 @@
 
         transform:
             perspective(800px)
-            translateX(-145px)
+            translateX(-220px)
             rotateY(20deg)
             scale(.88);
 
@@ -1297,7 +1297,7 @@
 
         transform:
             perspective(800px)
-            translateX(-300px)
+            translateX(-360px)
             rotateY(-15deg)
             scale(.65);
 
@@ -1311,7 +1311,7 @@
 
         transform:
             perspective(800px)
-            translateX(-300px)
+            translateX(-360px)
             rotateY(-15deg)
             scale(.72);
 
@@ -1321,7 +1321,7 @@
 
         transform:
             perspective(800px)
-            translateX(-145px)
+            translateX(-220px)
             rotateY(20deg)
             scale(.88);
 
@@ -1336,7 +1336,7 @@
 
         transform:
             perspective(800px)
-            translateX(-145px)
+            translateX(-220px)
             rotateY(20deg)
             scale(.88);
 
@@ -1372,7 +1372,7 @@
 
         transform:
             perspective(800px)
-            translateX(145px)
+            translateX(220px)
             rotateY(-20deg)
             scale(.88);
 
@@ -1388,7 +1388,7 @@
 
         transform:
             perspective(800px)
-            translateX(145px)
+            translateX(220px)
             rotateY(-20deg)
             scale(.88);
 
@@ -1398,7 +1398,7 @@
 
         transform:
             perspective(800px)
-            translateX(300px)
+            translateX(360px)
             rotateY(15deg)
             scale(.72);
 
@@ -1406,27 +1406,6 @@
 
 }
 
-.animateCarousel.moving .currentCard {
-
-    z-index:4;
-
-}
-
-
-.animateCarousel.moving .firstLeft,
-.animateCarousel.moving .firstRight {
-
-    z-index:6;
-
-}
-
-
-.animateCarousel.moving .secondLeft,
-.animateCarousel.moving .secondRight {
-
-    z-index:3;
-
-}
 
     
 }
