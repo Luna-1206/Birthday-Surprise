@@ -93,7 +93,7 @@ function MemoryCarousel({ memories }) {
 
             setIsAnimating(false);
 
-        }, 450);
+        }, 600);
     };
 
     const goPrevious = () => {
@@ -125,7 +125,7 @@ function MemoryCarousel({ memories }) {
 
             });     
 
-        }, 450);
+        }, 600);
     };
 
     return (
