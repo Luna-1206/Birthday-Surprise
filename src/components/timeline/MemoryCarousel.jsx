@@ -6,7 +6,15 @@ import "../../styles/timeline/MemoryCarousel.css";
 
 function MemoryCarousel({ memories }) {
 
+    const [touchStart, setTouchStart] = useState(null);
+
+    const [touchEnd, setTouchEnd] = useState(null);
+
     const [current, setCurrent] = useState(0);
+
+    const [direction, setDirection] = useState("");
+
+    const [isAnimating, setIsAnimating] = useState(false);
 
     const [expandedMemory, setExpandedMemory] = useState(null);
 
@@ -22,39 +30,141 @@ function MemoryCarousel({ memories }) {
     const next2 =
         (current + 2) % memories.length;
 
+    const cards = [
+
+        {
+            memory: memories[previous2],
+            className: "secondLeft"
+        },
+
+        {
+            memory: memories[previous1],
+            className: "firstLeft"
+        },
+
+        {
+            memory: memories[current],
+            className: "currentCard"
+        },
+
+        {
+            memory: memories[next1],
+            className: "firstRight"
+        },
+
+        {
+            memory: memories[next2],
+            className: "secondRight"
+        }
+
+    ];
+
+    const goNext = () => {
+
+        if (expandedMemory || isAnimating) return;
+
+        setIsAnimating(true);
+
+        setDirection("next");
+
+        setCurrent((prev) => (prev + 1) % memories.length);
+
+        setTimeout(() => {
+
+            setDirection("");
+
+            setIsAnimating(false);
+
+        }, 450);
+    };
+
+    const goPrevious = () => {
+
+        if (expandedMemory || isAnimating) return;
+
+        setIsAnimating(true);
+
+        setDirection("prev");
+
+        setCurrent((prev) => 
+        (prev - 1 + memories.length) % memories.length
+        );
+
+        setTimeout(() => {
+
+            setDirection("");
+
+            setIsAnimating(false);
+
+        }, 450);
+    };
+
     return (
 
         <div className="memoryCarousel">
 
-            <div className="carouselWrapper">
+            <div 
+            
+                className={`carouselWrapper animateCarousel ${direction}`}
+            
+                onTouchStart={(e) => {
+                    setTouchStart(e.targetTouches[0].clientX);
+                }}
 
-            {/* Second Left Card */}
+                onTouchMove={(e) => {
+                    setTouchEnd(e.targetTouches[0].clientX);
+                }}
 
-            <div className={`memoryCard secondLeft ${expandedMemory ? "disabledCard" : ""}`}>
+                onTouchEnd={() => {
 
-                <img
-                    src={memories[previous2].image}
-                    alt={memories[previous2].title}
+                    if (touchStart === null || touchEnd === null) return;
+
+                    const distance = touchStart - touchEnd;
+
+                    if (distance > 60) {
+
+                        goNext();
+
+                    }
+
+                    if (distance < -60) {
+
+                        goPrevious();
+
+                    }
+
+                    setTouchStart(null);
+
+                    setTouchEnd(null);
+                    
+                }}
+            >
+
+            <div 
+            
+                className={`memoryCard ${cards[1].className} ${expandedMemory ? "disabledCard" : ""}`}
+                
+            >
+
+                <img 
+                
+                src={cards[1].memory.image} 
+                
+                alt={cards[1].memory.title}
+                
                 />
 
-            </div>
-
-
-            {/* First Left Card */}
-
-            <div className={`memoryCard firstLeft ${expandedMemory ? "disabledCard" : ""}`}>
-
-                <img
-                    src={memories[previous1].image}
-                    alt={memories[previous1].title}
-                />
 
             </div>
-
 
                 {/* Left Arrow */}
 
-                <button className="left">
+                <button 
+                
+                    className="left"
+                    onClick={goPrevious}
+
+                >
 
                     ❮
 
@@ -69,52 +179,35 @@ function MemoryCarousel({ memories }) {
 
                 <div
                 
-                    className="memoryCard currentCard"
+                    className={`memoryCard ${cards[2].className}`}
+
                     onPointerDown={(e) => {
                         
                         e.stopPropagation();
 
-                        setExpandedMemory(memories[current]) }}
+                        setExpandedMemory(cards[2].memory);
 
+                    }}
                 >    
 
                     <h2 className="memoryTitle">
                         
-                        {memories[current].title}
+                        {cards[2].memory.title}
                         
                     </h2>
 
                     <div className="memoryDividerCarousel"></div>           
 
                     <img
-                        src={memories[current].image}
-                        alt={memories[current].title}
+                        src={cards[2].memory.image}
+                        alt={cards[2].memory.title}
                     />
 
                     <p className="memoryDate">
 
-                        {memories[current].date}
+                        {cards[2].memory.date}
 
                     </p>
-
-                    {/*
-                    <div className="photoOverlay">
-
-                        <span>
-
-                            Reveal this memory
-
-                        </span>
-
-                        <span className="expandIcon">
-
-                            ⌄
-
-                        </span>
-                        
-                    </div>
-
-                    */}
 
                 </div>
                 
@@ -124,32 +217,30 @@ function MemoryCarousel({ memories }) {
 
                 {/* Right Arrow */}
 
-                <button className="right">
+                <button 
+                
+                    className="right"
+                    onClick={goNext}
+                
+                >
 
                     ❯ 
 
                 </button>
 
 
-                {/* First Right Card */}
+                <div
 
-                <div className={`memoryCard firstRight ${expandedMemory ? "disabledCard" : ""}`}>
+                    className={`memoryCard ${cards[3].className} ${expandedMemory ? "disabledCard" : ""}`}
 
-                    <img
-                        src={memories[next1].image}
-                        alt={memories[next1].title}
-                    />
+                >
 
-                </div>
-
-
-                {/* Second Right Card */}
-
-                <div className={`memoryCard secondRight ${expandedMemory ? "disabledCard" : ""}`}>
-
-                    <img
-                        src={memories[next2].image}
-                        alt={memories[next2].title}
+                    <img 
+                    
+                    src={cards[3].memory.image} 
+                    
+                    alt={cards[3].memory.title}
+                    
                     />
 
                 </div>

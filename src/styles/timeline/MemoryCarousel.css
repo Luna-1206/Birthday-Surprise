@@ -36,9 +36,10 @@
     border-radius: 20px;
 
     transition: 
-        transform .45s ease,
+        transform .55s cubic-bezier(.22, .61, .36, 1),
         opacity .45s ease,
         filter .45s ease;
+        box-shadow: .45s ease;
 
 }
 
@@ -251,17 +252,40 @@
 
 .carouselWrapper button {
 
-    width: 46px;
+    width: 34px;
 
-    height: 46px;
+    height: 34px;
 
     border: none;
+
+    color: #7B1E1E;
+
+    background: none;
 
     border-radius: 50%;
 
     cursor: pointer;
 
-    font-size: 20px;
+    font-size: 34px;
+
+    transition:
+        transform .25s ease,
+        opacity .25s ease;
+
+    z-index: 999;
+}
+
+.carouselWrapper button:hover {
+
+    transform: scale(1.15);
+
+    opacity: .75;
+}
+
+.carouselWrapper button:active {
+
+    transform: scale(.92);
+    
 }
 
 .memoryTitle {
