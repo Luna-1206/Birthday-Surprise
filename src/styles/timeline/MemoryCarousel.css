@@ -1125,7 +1125,7 @@
 
         transform:
 
-            translateX(-220px)
+            translateX(-250px)
 
         perspective(800px)
 
@@ -1139,7 +1139,7 @@
 
         transform:
 
-            translateX(220px)
+            translateX(250px)
 
         perspective(800px)
 
@@ -1219,7 +1219,7 @@
 
         transform:
             perspective(800px)
-            translateX(220px)
+            translateX(250px)
             rotateY(-20deg)
             scale(.88);
 
@@ -1234,7 +1234,7 @@
     from {
 
         transform:
-            translateX(220px)
+            translateX(250px)
             perspective(800px)
             rotateY(-20deg)
             scale(.88);
@@ -1270,7 +1270,7 @@
     to {
 
         transform:
-            translateX(-220px)
+            translateX(-250px)
             perspective(800px)
             rotateY(20deg)
             scale(.88);
@@ -1287,7 +1287,7 @@
 
         transform:
             perspective(800px)
-            translateX(-220px)
+            translateX(-250px)
             rotateY(20deg)
             scale(.88);
 
@@ -1321,7 +1321,7 @@
 
         transform:
             perspective(800px)
-            translateX(-220px)
+            translateX(-250px)
             rotateY(20deg)
             scale(.88);
 
@@ -1336,7 +1336,7 @@
 
         transform:
             perspective(800px)
-            translateX(-220px)
+            translateX(-250px)
             rotateY(20deg)
             scale(.88);
 
@@ -1371,7 +1371,7 @@
     to {
 
         transform:
-            translateX(220px)
+            translateX(250px)
             perspective(800px)
             rotateY(-20deg)
             scale(.88);
@@ -1388,7 +1388,7 @@
 
         transform:
             perspective(800px)
-            translateX(220px)
+            translateX(250px)
             rotateY(-20deg)
             scale(.88);
 
