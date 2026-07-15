@@ -385,7 +385,10 @@
 
 .animateCarousel.moving .memoryCard {
 
-    transition: none;
+    transition:
+        transform .6s cubic-bezier(.22,1,.36,1),
+        opacity .6s ease,
+        filter .6s ease;
 
 }
 
@@ -1122,11 +1125,11 @@
 
         transform:
 
-            translateX(-250px)
+            translateX(-170px)
 
         perspective(800px)
 
-        rotateY(15deg)
+        rotateY(20deg)
 
         scale(.88);
 
@@ -1136,11 +1139,11 @@
 
         transform:
 
-            translateX(250px)
+            translateX(170px)
 
         perspective(800px)
 
-        rotateY(-15deg)
+        rotateY(-20deg)
 
         scale(.88);
 
@@ -1327,7 +1330,6 @@
 }
 
 
-
 @keyframes firstLeftPrev {
 
     from {
@@ -1401,6 +1403,28 @@
             scale(.72);
 
     }
+
+}
+
+.animateCarousel.moving .currentCard {
+
+    z-index:4;
+
+}
+
+
+.animateCarousel.moving .firstLeft,
+.animateCarousel.moving .firstRight {
+
+    z-index:6;
+
+}
+
+
+.animateCarousel.moving .secondLeft,
+.animateCarousel.moving .secondRight {
+
+    z-index:3;
 
 }
 
