@@ -2,6 +2,8 @@
 // Ito ang gagamitin natin para gumawa ng animations.
 import { motion } from "framer-motion";
 
+import { useState, useEffect } from "react";
+
 import Typewriter from "typewriter-effect";
 
 // Ina-import natin ang CSS file para sa design ng Landing page.
@@ -13,6 +15,37 @@ import "../styles/Landing.css";
 // Ito ang Landing component.
 // Ito ang magiging unang page na makikita niya.
 function Landing({ onReplay }) {
+
+    const [showScroll, setShowScroll] = useState(true);
+
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+
+        const handleScroll = () => {
+
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > lastScrollY && currentScroll > 50) {
+
+                setShowScroll(false);
+
+            } else {
+
+                setShowScroll(true);
+
+            }
+
+            setLastScrollY(currentScroll);
+
+        };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+
+}, [lastScrollY]);
+
   return (
 
     <section className="landing">
@@ -135,28 +168,42 @@ function Landing({ onReplay }) {
       </motion.div>
 
       <motion.div
-      
-        className="scrollIndicator"
 
-        animate={{
+    className="scrollIndicator"
 
-            y: [0, 10, 0],
+    initial={false}
 
-            opacity: [.5, 1, .5]
+    animate={{
 
-        }}
+        y: showScroll ? [0, 4, 0] : 60,
 
-        transition={{
+        opacity: showScroll ? [0.45, 1, 0.45] : 0
 
-            duration: 2,
+    }}
 
-            repeat: Infinity,
+    transition={{
 
-            ease: "easeInOut"
+        y: {
 
-        }}
+            duration: 1,
 
-      >
+            ease: "easeInOut",
+
+            repeat: showScroll ? Infinity : 0,
+
+            repeatType: "loop"
+
+        },
+
+        opacity: {
+
+            duration: .35
+
+        }
+
+    }}
+
+>
 
         <div className="scrollArrow">
 
