@@ -1,0 +1,51 @@
+.reasons {
+
+    min-height: 100vh;
+
+    padding: 90px 0;
+
+    background: #fff8f2;
+
+}
+
+.reasonsHeader {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+.reasonsHeader h1 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 70px;
+
+    color: #8b1f1f;
+
+    font-weight: normal;
+
+}
+
+.reasonsHeader span {
+
+    font-size: 38px;
+
+}
+
+@media (max-width: 768px) {
+
+    .reasonsHeader h1 {
+
+        font-size: 30px;
+    }
+
+    .reasonsHeader span {
+
+        font-size: 25px;
+    }
+}
