@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { easeIn, motion } from "framer-motion";
+
 import "../../styles/reasons/Reasons.css";
 
 import Sunflower from "../../assets/images/reasons/sunflower.png";
@@ -10,7 +12,7 @@ function Reasons() {
 
   const [page, setPage] = useState(0);
 
-  const [cardsPerPage, setCardsPerPage] = useState(8);
+  const [cardsPerPage, setCardsPerPage] = useState(10);
 
   useEffect(() => {
 
@@ -22,7 +24,7 @@ function Reasons() {
 
       } else {
 
-        setCardsPerPage(8);
+        setCardsPerPage(10);
 
       }
 
@@ -104,7 +106,26 @@ function Reasons() {
 
         </button>
 
-      <div className="reasonsGrid">
+      <motion.div 
+      
+        className="reasonsGrid"
+        
+        initial={{
+          opacity: 0,
+          x: page > 0 ? 60 : -60
+        }}
+
+        animate={{
+          opacity: 1,
+          x: 0
+        }}
+
+        transition={{
+          duration:.45,
+          ease: "easeOut"
+        }}
+        
+      >
 
         {
         
@@ -112,7 +133,7 @@ function Reasons() {
 
         <div 
         
-          className="reasonCard"
+          className={`reasonCard ${visibleReasons.length === 1 ? "lastReason" : ""}`}
 
           key={reason.id}
         
@@ -150,7 +171,7 @@ function Reasons() {
 
         }
 
-      </div>
+      </motion.div>
 
       <button
       
