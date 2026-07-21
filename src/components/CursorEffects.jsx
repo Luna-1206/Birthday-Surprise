@@ -17,7 +17,7 @@ function CursorEffects () {
 
             const now = Date.now();
 
-            if (now - lastTrail.current < 50) return;
+            if (now - lastTrail.current < 20) return;
 
             lastTrail.current = now;
 
