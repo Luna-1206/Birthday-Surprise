@@ -368,18 +368,19 @@
 
     .reasonFlower {
 
+
         width: 65px;
         
     }
 
     .reasonsHeader h1 {
 
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .reasonsHeader span {
 
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .reasonsGrid {
@@ -401,7 +402,7 @@
 
         opacity: .35;
 
-        left: -30px;
+        left: -10px;
 
         top: 52%;
     }
@@ -410,7 +411,7 @@
 
         opacity: .35;
 
-        right: -30px;
+        right: -10px;
 
         top: 52%;
     }
