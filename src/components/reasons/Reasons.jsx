@@ -14,6 +14,8 @@ function Reasons() {
 
   const [cardsPerPage, setCardsPerPage] = useState(10);
 
+  const [direction, setDirection] = useState(1);
+
   useEffect(() => {
 
     const handleResize = () => {
@@ -61,6 +63,8 @@ function Reasons() {
 
     if (page < totalPages - 1) {
 
+      setDirection(1);
+
       setPage(page + 1);
 
     }
@@ -71,8 +75,9 @@ function Reasons() {
 
     if (page > 0) {
 
-      setPage(page - 1);
+      setDirection(-1);
 
+      setPage(page - 1);
 
     }
 
@@ -108,11 +113,15 @@ function Reasons() {
 
       <motion.div 
       
-        className="reasonsGrid"
+        key={page}
+
+        className={`reasonsGrid ${
+        visibleReasons.length === 1 ? "lastReasonPage" : ""
+    }`}
         
         initial={{
           opacity: 0,
-          x: page > 0 ? 60 : -60
+          x: direction === 1 ? 80 : -80
         }}
 
         animate={{
@@ -120,8 +129,15 @@ function Reasons() {
           x: 0
         }}
 
+        exit={{
+
+          opacity: 0,
+
+          x: direction === 1 ? -80 : 80
+        }}
+
         transition={{
-          duration:.45,
+          duration: 0.45,
           ease: "easeOut"
         }}
         
