@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { easeIn, motion } from "framer-motion";
 
@@ -7,6 +7,7 @@ import "../../styles/reasons/Reasons.css";
 import Sunflower from "../../assets/images/reasons/sunflower.png";
 
 import reasons from "../../data/reasons";
+import { blockquote } from "framer-motion/client";
 
 function Reasons() {
 
@@ -15,6 +16,8 @@ function Reasons() {
   const [cardsPerPage, setCardsPerPage] = useState(10);
 
   const [direction, setDirection] = useState(1);
+
+  const reasonsRef = useRef(null);
 
   useEffect(() => {
 
@@ -42,6 +45,17 @@ function Reasons() {
         window.removeEventListener("resize", handleResize); 
   
   }, []);
+  
+  const scrollToReasons = () => {
+
+    reasonsRef.current?.scrollIntoView({
+
+      behavior: "smooth",
+
+      block: "start"
+
+    });
+  };
 
   const start = page * cardsPerPage;
 
@@ -67,6 +81,12 @@ function Reasons() {
 
       setPage(page + 1);
 
+      setTimeout(() => {
+
+        scrollToReasons();
+
+      }, 100);
+
     }
 
   };
@@ -79,13 +99,25 @@ function Reasons() {
 
       setPage(page - 1);
 
+      setTimeout(() => {
+
+        scrollToReasons();
+        
+      }, 100);
+
     }
 
   };
 
   return (
 
-    <section className="reasons">
+    <section 
+    
+      className="reasons"
+
+      ref={reasonsRef}
+    
+    >
 
       <div className="reasonsHeader">
 
