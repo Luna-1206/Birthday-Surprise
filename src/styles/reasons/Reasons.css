@@ -67,7 +67,7 @@
 
     min-height: 580px;
 
-    margin: 70px auto 0;
+    margin: 20px auto 0;
 
 }
 
@@ -352,7 +352,7 @@
 
         min-height: 580px;
 
-        margin: 0 auto 0;
+        margin: 15px auto 0;
 
         position: relative;
         
@@ -376,6 +376,7 @@
     .reasonsHeader h1 {
 
         font-size: 25px;
+
     }
 
     .reasonsHeader span {
@@ -404,7 +405,7 @@
 
         left: -10px;
 
-        top: 52%;
+        top: 48%;
     }
 
     .reasonNext {
@@ -413,7 +414,7 @@
 
         right: -10px;
 
-        top: 52%;
+        top: 48%;
     }
 
     .lastReason {
