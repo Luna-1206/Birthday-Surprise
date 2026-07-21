@@ -6,6 +6,20 @@
 
     background: #fff8f2;
 
+    background-image:
+
+    url("../../assets/images/reasons/flower1.png"),
+
+    url("../../assets/images/reasons/flower2.png");
+
+    background-repeat:no-repeat;
+
+    background-position:
+
+    left top,
+
+    right bottom;
+
 }
 
 .reasonsHeader {
@@ -37,6 +51,284 @@
 
 }
 
+/* ==========================
+   REASONS GRID
+========================== */
+
+.reasonsGrid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    
+    gap: 45px;
+
+    max-width: 1100px;
+
+    margin: 70px auto 0;
+
+    justify-content: center;
+
+}
+
+.reasonsContainer {
+
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: 70px auto 0;
+
+}
+
+.reasonCard {
+
+    width: 180px;
+
+    height: 265px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffaf4 0%,
+            #fdf3e5 100%,
+        );
+
+    border-radius: 22px;
+
+    border: 2px solid #e7d5bc;
+
+    box-shadow:
+
+        0 12px 30px rgba(0,0,0, .10),
+        inset 0 0 0 1px rgba(255,255,255,.6);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+    background-image:
+
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,.7),
+            transparent 55%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            rgba(240,220,180,.4),
+            transparent 50%
+        );
+
+}
+
+.reasonCard::before {
+
+    content:"❀";
+
+    position:absolute;
+
+    left:-25px;
+
+    top:-25px;
+
+    width:70px;
+
+    height:70px;
+
+    background:rgba(255,255,255,.45);
+
+    border-radius:50%;
+
+    filter:blur(20px);
+
+}
+
+.reasonCard::after {
+
+    content:"❀";
+
+    position:absolute;
+
+    right:-30px;
+
+    bottom:-30px;
+
+    width:80px;
+
+    height:80px;
+
+    background:rgba(255,255,255,.35);
+
+    border-radius:50%;
+
+    filter:blur(20px);
+
+}
+
+.reasonCard:hover {
+
+    transform:  
+        translateY(-10px)
+
+        scale(1.04);
+
+    box-shadow: 
+    
+        0 18px 40px rgba(0, 0, 0, .18);
+
+}
+
+.paperTape {
+
+    width: 75px;
+
+    height: 16px;
+
+    background: #F4E486;
+
+    position: absolute;
+
+    top: 18px;
+
+    opacity: .75;
+
+    border-radius: 4px;
+
+    transform: rotate(-3deg);
+    
+}
+
+.reasonFlower {
+    
+    width: 82px;
+
+    margin-bottom: 18px;
+
+    transition: .45s;
+
+}
+
+.reasonCard:hover .reasonFlower {
+
+    transform:
+
+        rotate(8deg)
+
+        scale(1.08);
+        
+}
+
+.reasonCard h2 {
+
+    margin: 0;
+
+    margin-top: 6px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    font-style: italic;
+
+    color: #66452e;
+
+}
+
+.reasonDivider {
+
+    width: 100px;
+    
+    margin: 10px 0;
+
+    height: 1px;
+
+    opacity: .45;
+
+    background: #A08A72;
+
+}
+
+.reasonCard p {
+
+    font-size: 15px;
+
+    color: #8b3030;
+
+    letter-spacing: .5px;
+
+    font-weight: 600;
+
+}
+
+.reasonPrev {
+
+    left: -70px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+.reasonNext {
+
+    right: -70px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+.reasonPrev,
+.reasonNext {
+
+    position: absolute;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow: 
+        0 10px 25px rgba(0,0,0,.15);
+
+    cursor: pointer;
+
+    font-size: 26px;
+
+    transition: .25s;
+
+    z-index: 20;
+
+}
+
+.reasonPrev:hover,
+.reasonNext:hover {
+
+    transform: translateY(-50%) scale(1.08);
+
+}
+
 @media (max-width: 768px) {
 
     .reasonsHeader h1 {
@@ -47,5 +339,14 @@
     .reasonsHeader span {
 
         font-size: 25px;
+    }
+
+    .reasonsGrid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+
+        max-width: 420px;
     }
 }
