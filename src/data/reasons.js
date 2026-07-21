@@ -6,7 +6,7 @@ const reasons = [
 
         title: "Reason #1",
 
-        reason: "Reason 1",
+        reason: "I love how you always make my ordinary days feel special.",
 
     },
 

@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import "../../styles/reasons/Reasons.css";
 
 import Sunflower from "../../assets/images/reasons/sunflower.png";
 
 import reasons from "../../data/reasons";
+import TypeText from "./TypeText";
+
 import { blockquote } from "framer-motion/client";
 
 function Reasons() {
@@ -16,6 +18,8 @@ function Reasons() {
   const [cardsPerPage, setCardsPerPage] = useState(10);
 
   const [direction, setDirection] = useState(1);
+
+  const [openReason, setOpenReason] = useState(null);
 
   const reasonsRef = useRef(null);
 
@@ -102,7 +106,7 @@ function Reasons() {
       setTimeout(() => {
 
         scrollToReasons();
-        
+
       }, 100);
 
     }
