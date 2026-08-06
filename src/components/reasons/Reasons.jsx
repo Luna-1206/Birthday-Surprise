@@ -9,8 +9,6 @@ import Sunflower from "../../assets/images/reasons/sunflower.png";
 import reasons from "../../data/reasons";
 import TypeText from "./TypeText";
 
-import { blockquote } from "framer-motion/client";
-
 function Reasons() {
 
   const [page, setPage] = useState(0);
@@ -20,6 +18,8 @@ function Reasons() {
   const [direction, setDirection] = useState(1);
 
   const [openReason, setOpenReason] = useState(null);
+
+  const [typingFinished, setTypingFinished] = useState(false);
 
   const reasonsRef = useRef(null);
 
@@ -185,37 +185,99 @@ function Reasons() {
 
         <div 
         
-          className={`reasonCard ${visibleReasons.length === 1 ? "lastReason" : ""}`}
+          className={`reasonCard 
+            ${visibleReasons.length === 1 ? "lastReason" : ""}
+            ${openReason === reason.id ? "opened" : ""}
+            `}
 
           key={reason.id}
+
+          onClick={() => {
+
+            if (openReason === reason.id) {
+              
+              setOpenReason(null);
+
+              setTypingFinished(false);
+
+            } else {
+
+              setTypingFinished(false);
+
+              setOpenReason(reason.id);
+
+            }
+
+          }}
         
         >
+          
+          <div className="reasonCardInner">
 
-          <div className="paperTape"></div>
+            <div className="cardFront">
 
-            <img 
+              <div className="paperTape"></div>
+
+                <img 
             
-                src={Sunflower}
+                    src={Sunflower}
             
-                alt="Sunflower" 
+                    alt="Sunflower" 
 
-                className="reasonFlower"
+                    className="reasonFlower"
             
-            />
+                />
 
-            <h2>
+                <h2>
               
-               {reason.title}
+                  {reason.title}
                
-            </h2>
+                </h2>
 
-            <div className="reasonDivider"></div>
+                <div className="reasonDivider"></div>
 
-            <p>
+                <p>
               
-               - Click to Open - 
+                  - Click to Open - 
 
-            </p>
+                </p>
+
+              </div>
+
+                <div className="cardBack">
+
+                  <div className="reasonMessage">
+
+                    <TypeText 
+
+                      key={openReason}
+
+                      text={reason.reason} 
+
+                      onFinish={() => setTypingFinished(true)}
+
+                    />
+
+                  </div>
+
+                  <div
+                  
+                    className={`closeHint ${
+                      typingFinished && 
+                      openReason === reason.id
+                      ? "showHint"
+                      : ""
+                    }`}
+
+                  >
+
+                    - Tap anywhere to close -
+
+                  </div>
+                
+                </div>
+
+            </div>
 
         </div>
 

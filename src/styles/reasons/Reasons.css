@@ -148,6 +148,7 @@
             transparent 50%
         );
 
+    perspective: 1200px;
 }
 
 .reasonCard::before {
@@ -341,6 +342,139 @@
 .reasonNext:hover {
 
     transform: translateY(-50%) scale(1.08);
+
+}
+
+/* ==========================
+   CARD FLIP
+========================== */
+
+.reasonCardInner {
+    
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition: transform .8s cubic-bezier(.22, .61, .36, 1);
+}
+
+.reasonCard.opened .reasonCardInner {
+
+    transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 22px;
+
+    backface-visibility: hidden;
+
+}
+
+.cardFront {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.cardBack {
+
+    transform: rotateY(180deg);
+    
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    background: linear-gradient(
+        180deg,
+        #fffdf9,
+        #fff3e6
+    );
+}
+
+.typeText {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+
+    line-height: 1.7;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    color: #6b4731;
+
+    font-style: italic;
+
+}
+
+.reasonMessage {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex: 1;    
+
+    width: 100%;
+
+}
+
+.closeHint {
+
+    position: absolute;
+
+    bottom: 18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    opacity: 0;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    color: #a04545;
+
+    transition: .6s;
+
+    pointer-events: none;
+
+    white-space: nowrap;
+
+}
+
+.showHint {
+    
+    opacity: 1;
 
 }
 

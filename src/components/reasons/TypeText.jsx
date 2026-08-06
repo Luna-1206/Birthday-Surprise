@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function TypeText({text}) {
+function TypeText({ text, onFinish }) {
     
     const [display, setDisplay] = useState("");
 
@@ -10,29 +10,43 @@ function TypeText({text}) {
 
         let index = 0;
 
-        const interval = setInterval(() => {
+        let interval;
 
-            setDisplay(
+        const delay = setTimeout(() => {
 
-                prev => prev + text [index]
+            interval = setInterval(() => {
 
-            );
+                index++;
 
-            index++;
+                setDisplay(text.slice(0, index));
 
-            if(index >= text.length) {
+                if (index >= text.length) {
 
-                clearInterval(interval);
-            }
+                    clearInterval(interval);
 
-        }, 45);
+                    setTimeout(() => {
 
-        return ()=> clearInterval(interval);
+                        onFinish?.();
 
-    }, [text]);
+                    }, 800);
+                }
+
+            }, 45);
+
+        }, 250); // 250ms delay before start typing
+
+        return () => {
+
+            clearTimeout(delay);
+
+            clearInterval(interval);
+
+        };
+
+    }, [text, onFinish]);
 
     return(
-
+        
         <p className="typeText">
 
             {display}
@@ -40,6 +54,7 @@ function TypeText({text}) {
         </p>
 
     );
+
 }
 
 export default TypeText;
