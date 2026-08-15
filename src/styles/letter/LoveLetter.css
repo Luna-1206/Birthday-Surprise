@@ -13,17 +13,21 @@
 
 .letterTitle {
 
-    font-family: "Great Vibes", cursive;
+    font-family: "Cormorant Garamond", serif;
 
-    font-size: 65px;
+    font-size: 6rem;
 
-    font-weight: normal;
+    color: #7B1E1E;
 
-    color: #7b1e1e;
+    padding-bottom: 20px;
 
-    margin: 0 0 25px;
+    font-weight: 600;
+
+    font-style: italic;
 
     text-align: center;
+
+    margin: 0;
 
 }
 
@@ -193,7 +197,7 @@
 
     .letterTitle {
 
-    font-size: 45px;
+    font-size: 60px;
 
     margin-bottom: 18px;
 
