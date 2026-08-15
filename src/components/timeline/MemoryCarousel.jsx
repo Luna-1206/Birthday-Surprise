@@ -226,13 +226,23 @@ function MemoryCarousel({ memories }) {
 
                 <div
                 
-                    className={`memoryCard ${slots[2].className}`}
+                    className={`memoryCard ${slots[2].className} ${
+                        isAnimating ? "opening" : ""
+                    }`}
 
                     onClick={(e) => {
                         
                         e.stopPropagation();
+                        
+                        setIsAnimating(true);
 
-                        setExpandedMemory(slots[2].memory);
+                        setTimeout(() => {
+
+                            setExpandedMemory(slots[2].memory);
+
+                            setIsAnimating(false);
+
+                        }, 250);
 
                     }}
                 >    

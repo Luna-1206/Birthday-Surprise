@@ -14,6 +14,7 @@ import CursorEffects from "./components/CursorEffects.jsx";
 import StickyNotes from "./components/story/StickyNotes.jsx";
 import Timeline from "./components/timeline/Timeline";
 import Reasons from "./components/reasons/Reasons";
+import LoveLetter from "./components/letter/LoveLetter";
 
 // Ang App() ang pinaka-main component ng buong website.
 // Parang main class sa Java kung saan nagsisimula ang flow.
@@ -204,6 +205,8 @@ function App() {
       
 
       <Reasons />
+
+      <LoveLetter />
 
     </>
     }

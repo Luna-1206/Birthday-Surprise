@@ -1,0 +1,254 @@
+.loveLetter {
+
+    min-height: 100vh;
+
+    padding: 100px 20px;
+
+    background: #fff8f2;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* =========================
+   LETTER PAPER
+========================= */
+
+.letterPaper {
+
+    position: relative;
+
+    width: min(850px, 92vw);
+
+    padding: 75px 85px;
+
+    background: #fffdf7;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .12),
+        0 2px 8px rgba(123, 30, 30, .08);
+
+}
+
+
+/* subtle paper edge */
+
+.letterPaper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border: 1px solid rgba(123, 30, 30, .10);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================
+   SUNFLOWER
+========================= */
+
+.letterDecoration {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 35px;
+
+    font-size: 35px;
+
+    transform: rotate(10deg);
+
+}
+
+
+/* =========================
+   GREETING
+========================= */
+
+.letterPaper h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 55px;
+
+    font-weight: normal;
+
+    color: #7b1e1e;
+
+    margin: 0 0 35px;
+
+}
+
+
+/* =========================
+   LETTER BODY
+========================= */
+
+.letterBody {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #5f4637;
+
+}
+
+
+.letterBody p {
+
+    margin: 0 0 25px;
+
+}
+
+
+/* =========================
+   CLOSING
+========================= */
+
+.letterClosing {
+
+    margin-top: 45px;
+
+    text-align: right;
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #7b1e1e;
+
+}
+
+
+.letterClosing p {
+
+    font-size: 19px;
+
+    margin: 0;
+
+}
+
+
+.letterClosing h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin: 5px 0 0;
+
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 768px) {
+
+    .loveLetter {
+
+        min-height: 100vh;
+
+        padding: 70px 14px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .letterPaper {
+
+        width: 100%;
+
+        max-width: 420px;
+
+        padding: 55px 25px 45px;
+
+        border-radius: 5px;
+
+    }
+
+
+    .letterPaper::before {
+
+        inset: 7px;
+
+    }
+
+
+    .letterDecoration {
+
+        top: 18px;
+
+        right: 20px;
+
+        font-size: 28px;
+
+    }
+
+
+    .letterPaper h1 {
+
+        font-size: 40px;
+
+        margin-bottom: 25px;
+
+        padding-right: 35px;
+
+    }
+
+
+    .letterBody {
+
+        font-size: 18px;
+
+        line-height: 1.65;
+
+    }
+
+
+    .letterBody p {
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .letterClosing {
+
+        margin-top: 35px;
+
+    }
+
+
+    .letterClosing p {
+
+        font-size: 17px;
+
+    }
+
+
+    .letterClosing h2 {
+
+        font-size: 35px;
+
+    }
+
+}

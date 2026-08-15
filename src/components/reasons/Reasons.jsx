@@ -17,6 +17,8 @@ function Reasons() {
 
   const [direction, setDirection] = useState(1);
 
+  const [isChangingPage, setIsChangingPage] = useState(false);
+
   const [openReason, setOpenReason] = useState(null);
 
   const [typingFinished, setTypingFinished] = useState(false);
@@ -79,37 +81,37 @@ function Reasons() {
 
   const nextPage = () => {
 
-    if (page < totalPages - 1) {
+    if (isChangingPage || page >= totalPages - 1) return;
 
-      setDirection(1);
+    setIsChangingPage(true);
 
-      setPage(page + 1);
+    setDirection(1);
 
-      setTimeout(() => {
+    setPage(page + 1);
 
-        scrollToReasons();
+    setTimeout(() => {
 
-      }, 100);
-
-    }
+      setIsChangingPage(false);
+ 
+    }, 500);
 
   };
 
   const previousPage = () => {
 
-    if (page > 0) {
+    if (isChangingPage || page <= 0) return;
 
-      setDirection(-1);
+    setIsChangingPage(true);
 
-      setPage(page - 1);
+    setDirection(-1);
 
-      setTimeout(() => {
+    setPage(page - 1);
 
-        scrollToReasons();
+    setTimeout(() => {
 
-      }, 100);
+      setIsChangingPage(false);
 
-    }
+    }, 500);
 
   };
 

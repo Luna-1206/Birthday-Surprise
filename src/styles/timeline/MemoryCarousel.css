@@ -93,7 +93,7 @@
 
 .currentCard:hover:not(.currentExpanded) {
 
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.015);
 
 }
 
@@ -108,7 +108,35 @@
 
 .currentCard:active {
 
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(.98);
+
+}
+
+.currentCard.opening {
+
+    animation: memoryOpening .25s ease;
+    
+}
+
+@keyframes memoryOpening {
+
+    0% {
+        transform: translateY(0) scale(1);
+        box-shadow:
+            0 25px 60px rgba(0, 0, 0, .18);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.025);
+        box-shadow:
+            0 30px 70px rgba(123, 30, 30, .22);
+    }
+
+    100% {
+        transform: translateY(-4px) scale(1.01);
+        box-shadow:
+            0 35px 75px rgba(123, 30, 30, .25);
+    }
 
 }
 

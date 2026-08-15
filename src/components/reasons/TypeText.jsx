@@ -31,7 +31,7 @@ function TypeText({ text, onFinish }) {
                     }, 800);
                 }
 
-            }, 75);
+            }, 50);
 
         }, 250); // 250ms delay before start typing
 

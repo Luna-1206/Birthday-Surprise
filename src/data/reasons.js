@@ -6,7 +6,7 @@ const reasons = [
 
         title: "Reason #1",
 
-        reason: "I love how you always make my ordinary days feel special.",
+        reason: "You make my ordinary days feel special just by being there.",
 
     },
 
@@ -16,7 +16,7 @@ const reasons = [
 
         title: "Reason #2",
 
-        reason: "Reason 2",
+        reason: "You always know how to make me smile, even on my worst days.",
 
     },
 
@@ -26,7 +26,7 @@ const reasons = [
 
         title: "Reason #3",
 
-        reason: "Reason 3",
+        reason: "I can always be myself around you without being afraid of being judged.",
 
     },
 
@@ -36,7 +36,7 @@ const reasons = [
 
         title: "Reason #4",
 
-        reason: "Reason 4",
+        reason: "You understand me in ways that words sometimes cannot explain.",
 
     },
 
@@ -46,7 +46,7 @@ const reasons = [
 
         title: "Reason #5",
 
-        reason: "Reason 5",
+        reason: "Your smile can instantly make my whole day better.",
 
     },
 
@@ -56,7 +56,7 @@ const reasons = [
 
         title: "Reason #6",
 
-        reason: "Reason 6",
+        reason: "You make me feel safe, comfortable, and genuinely loved.",
 
     },
 
@@ -66,7 +66,7 @@ const reasons = [
 
         title: "Reason #7",
 
-        reason: "Reason 7",
+        reason: "Even the smallest things you do can mean so much to me.",
 
     },
 
@@ -76,7 +76,7 @@ const reasons = [
 
         title: "Reason #8",
 
-        reason: "Reason 8",
+        reason: "You turn simple moments together into memories I always want to keep.",
 
     },
 
@@ -86,7 +86,7 @@ const reasons = [
 
         title: "Reason #9",
 
-        reason: "Reason 9",
+        reason: "Being with you makes my problems feel a little easier to handle.",
 
     },
 
@@ -96,7 +96,7 @@ const reasons = [
 
         title: "Reason #10",
 
-        reason: "Reason 10",
+        reason: "I love how we can laugh together over the simplest things.",
 
     },
 
@@ -106,7 +106,7 @@ const reasons = [
 
         title: "Reason #11",
 
-        reason: "Reason 11",
+        reason: "You’re patient with me, even when I’m difficult to understand.",
 
     },
 
@@ -116,7 +116,7 @@ const reasons = [
 
         title: "Reason #12",
 
-        reason: "Reason 12",
+        reason: "You inspire me to become a better version of myself every day.",
 
     },
 
@@ -126,7 +126,7 @@ const reasons = [
 
         title: "Reason #13",
 
-        reason: "Reason 13",
+        reason: "You’re someone I can talk to about anything without hesitation.",
 
     },
 
@@ -136,7 +136,7 @@ const reasons = [
 
         title: "Reason #14",
 
-        reason: "Reason 14",
+        reason: "I love your little habits because they make you uniquely you.",
 
     },
 
@@ -146,7 +146,7 @@ const reasons = [
 
         title: "Reason #15",
 
-        reason: "Reason 15",
+        reason: "You make even the simplest days feel worth remembering.",
 
     },
 
@@ -156,7 +156,7 @@ const reasons = [
 
         title: "Reason #16",
 
-        reason: "Reason 16",
+        reason: "I’m grateful for every memory we’ve made and every memory still waiting for us.",
 
     },
 
@@ -166,7 +166,7 @@ const reasons = [
 
         title: "Reason #17",
 
-        reason: "Reason 17",
+        reason: "Your presence alone can make me feel calm and at peace.",
 
     },
 
@@ -176,7 +176,7 @@ const reasons = [
 
         title: "Reason #18",
 
-        reason: "Reason 18",
+        reason: "You’ve become such an important part of my life that I can’t imagine it without you.",
 
     },
 
@@ -186,7 +186,7 @@ const reasons = [
 
         title: "Reason #19",
 
-        reason: "Reason 19",
+        reason: "You bring out a side of me that I never knew I had.",
 
     },
 
@@ -196,7 +196,7 @@ const reasons = [
 
         title: "Reason #20",
 
-        reason: "Reason 20",
+        reason: "No matter what happens, I know I would still choose you all over again.",
 
     },
 
@@ -206,7 +206,7 @@ const reasons = [
 
         title: "Reason #21",
 
-        reason: "Reason 21",
+        reason: "Because out of everyone in this world, you’re the person my heart feels most at home with. ❤️",
 
     }
 

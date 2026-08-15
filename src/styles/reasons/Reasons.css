@@ -132,7 +132,9 @@
 
     cursor: pointer;
 
-    transition: .35s;
+    transition: 
+        transform .25s ease,
+        box-shadow .35s ease;
 
     background-image:
 
@@ -205,6 +207,14 @@
     box-shadow: 
     
         0 18px 40px rgba(0, 0, 0, .18);
+
+}
+
+.reasonCard.opened {
+
+    box-shadow:
+        0 20px 45px rgba(139, 31, 31, .25),
+        0 0 30px rgba(255, 215, 180, .55);
 
 }
 
@@ -359,12 +369,31 @@
 
     transform-style: preserve-3d;
 
-    transition: transform .8s cubic-bezier(.22, .61, .36, 1);
+    transition: 
+        transform .8s cubic-bezier(.22, .61, .36, 1);
 }
 
 .reasonCard.opened .reasonCardInner {
 
     transform: rotateY(180deg);
+
+    animation: flipOpen .8s cubic-bezier(.22, .61, .36, 1);
+}
+
+@keyframes flipOpen {
+
+    0% {
+        transform: rotateY(0deg) scale(1);
+    }
+
+    30% {
+        transform: rotateY(45deg) scale(1.04);
+    }
+
+    100% {
+        transform: rotateY(180deg) scale(1);
+    }
+
 }
 
 .cardFront,
