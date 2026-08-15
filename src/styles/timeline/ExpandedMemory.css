@@ -18,6 +18,49 @@
 
 }
 
+
+.expandedContent h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    font-weight: 600;
+
+    color: #7B1E1E;
+
+}
+
+.expandedContent p {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    color: #7B1E1E;
+
+    font-weight: 500;
+
+    letter-spacing: .5px;
+
+}
+
+.expandedContent blockquote {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    color: #5f4637;
+
+    font-style: italic;
+
+    margin: 25px 10px;
+
+}
+
 .expandedContent {
 
     position: relative;

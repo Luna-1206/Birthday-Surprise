@@ -1,4 +1,6 @@
 import firstPhoto from "../../assets/images/first.jpg";
+import secondPhoto from "../../assets/images/second.jpg";
+import thirdPhoto from "../../assets/images/third.jpg";
 // later dadagdagan natin ibang photos
 
 
@@ -13,7 +15,7 @@ const memoryData = [
         date:"October 9, 2022 ❤️",
 
         quote:
-        "And I didn't know that moment would change my life."
+        "“And I didn't know that moment would change my life.”"
 
     },
 
@@ -22,12 +24,12 @@ const memoryData = [
 
         title:"We Stayed",
 
-        image:firstPhoto,
+        image:secondPhoto,
 
-        date:"December 2022 ❤️",
+        date:"December 14, 2022 ❤️",
 
         quote:
-        "Thank you for choosing me every single day."
+        "“Thank you for choosing me every single day.”"
 
     },
 
@@ -36,12 +38,12 @@ const memoryData = [
 
         title:"We Laughed",
 
-        image:firstPhoto,
+        image:thirdPhoto,
 
-        date:"November 2022 ❤️",
+        date:"November 26, 2022 ❤️",
 
         quote:
-        "I fell in love with your smile before I even realized it."
+        "“I fell in love with your smile before I even realized it.”"
 
     }
 

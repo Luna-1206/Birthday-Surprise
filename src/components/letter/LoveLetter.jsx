@@ -12,13 +12,13 @@ function LoveLetter() {
                     🌻
                 </div>
 
-                <h1>My Love,</h1>
+                <h1>My Wabwab,</h1>
 
                 <div className="letterBody">
 
                     <p>
-                        Happy birthday, my love. I hope you know how much
-                        you mean to me and how grateful I am to have you
+                        Happy birthday, wabwab ko. I hope you know how important you are to me
+                        and how grateful I am to have you
                         in my life.
                     </p>
 
@@ -31,7 +31,7 @@ function LoveLetter() {
                     <p>
                         I love the way you make me smile, the way you care,
                         the way you make me feel understood, and all the
-                        little things about you that make you uniquely you.
+                        little things about you that makes you unique.
                     </p>
 
                     <p>
@@ -49,7 +49,7 @@ function LoveLetter() {
                     </p>
 
                     <p>
-                        Thank you for being part of my life, for giving me
+                        Thank you for being the best part of my life, for giving me
                         memories I will always treasure, and for being
                         someone I can love with all my heart.
                     </p>
@@ -63,7 +63,7 @@ function LoveLetter() {
 
                     <p>
                         I love you more than these words can ever explain.
-                        Happy birthday, my love. ❤️
+                        Happy birthday, my wabwab. ❤️
                     </p>
 
                 </div>
