@@ -133,3 +133,13 @@
 
     transform: translateY(1px);
 }
+
+@media (max-width: 768px) {
+    
+    .expandedContent blockquote {
+
+    font-size: 12px;
+
+    }
+
+}
