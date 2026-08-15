@@ -1,3 +1,32 @@
+.letterSection {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.letterTitle {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 65px;
+
+    font-weight: normal;
+
+    color: #7b1e1e;
+
+    margin: 0 0 25px;
+
+    text-align: center;
+
+}
+
 .loveLetter {
 
     min-height: 100vh;
@@ -25,7 +54,7 @@
 
     width: min(850px, 92vw);
 
-    padding: 75px 85px;
+    padding: 100px 85px;
 
     background: #fffdf7;
 
@@ -161,6 +190,14 @@
 ========================= */
 
 @media (max-width: 768px) {
+
+    .letterTitle {
+
+    font-size: 45px;
+
+    margin-bottom: 18px;
+
+    }
 
     .loveLetter {
 

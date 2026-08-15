@@ -6,6 +6,12 @@ function LoveLetter() {
 
         <section className="loveLetter">
 
+            <div className="letterSection">
+
+                <h2 className="letterTitle">
+                    Birthday Letter
+                </h2>
+
             <div className="letterPaper">
 
                 <div className="letterDecoration">
@@ -75,6 +81,8 @@ function LoveLetter() {
                     <h2>Lee ❤️</h2>
 
                 </div>
+
+            </div>
 
             </div>
 
