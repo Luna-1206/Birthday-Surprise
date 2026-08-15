@@ -1,3 +1,19 @@
+.loveLetter {
+
+    min-height: 100vh;
+
+    padding: 100px 20px;
+
+    background: #fff8f2;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
 .letterSection {
 
     width: 100%;
@@ -9,7 +25,6 @@
     align-items: center;
 
 }
-
 
 .letterTitle {
 
@@ -31,47 +46,36 @@
 
 }
 
-.loveLetter {
-
-    min-height: 100vh;
-
-    padding: 100px 20px;
-
-    background: #fff8f2;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-}
-
-
-/* =========================
-   LETTER PAPER
-========================= */
-
 .letterPaper {
 
     position: relative;
 
     width: min(850px, 92vw);
 
-    padding: 100px 85px;
+    padding: 70px 80px;
 
-    background: #fffdf7;
+    background:
+
+        linear-gradient(
+            rgba(255,255,255,.25),
+            rgba(255,255,255,.25)
+        ),
+
+        #fffdf7;
 
     border-radius: 5px;
 
+    border: 1px solid rgba(139, 31, 31, .12);
+
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, .12),
-        0 2px 8px rgba(123, 30, 30, .08);
+
+        0 20px 50px rgba(0,0,0,.12),
+
+        0 2px 5px rgba(0,0,0,.05);
 
 }
 
-
-/* subtle paper edge */
+/* subtle paper lines */
 
 .letterPaper::before {
 
@@ -79,18 +83,13 @@
 
     position: absolute;
 
-    inset: 10px;
+    inset: 25px;
 
-    border: 1px solid rgba(123, 30, 30, .10);
+    border: 1px solid rgba(139,31,31,.08);
 
     pointer-events: none;
 
 }
-
-
-/* =========================
-   SUNFLOWER
-========================= */
 
 .letterDecoration {
 
@@ -106,10 +105,19 @@
 
 }
 
+.letterDate {
 
-/* =========================
-   GREETING
-========================= */
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    color: #a07b67;
+
+    font-style: italic;
+
+    margin-bottom: 10px;
+
+}
 
 .letterPaper h1 {
 
@@ -125,10 +133,9 @@
 
 }
 
-
-/* =========================
-   LETTER BODY
-========================= */
+/* IMPORTANT:
+   LetterTypeText already creates .letterBody
+*/
 
 .letterBody {
 
@@ -142,19 +149,15 @@
 
 }
 
-
 .letterBody p {
 
     margin: 0 0 25px;
 
-    font-weight: bold;
+    min-height: 1.8em;
 
 }
 
-
-/* =========================
-   CLOSING
-========================= */
+/* closing */
 
 .letterClosing {
 
@@ -168,7 +171,6 @@
 
 }
 
-
 .letterClosing p {
 
     font-size: 19px;
@@ -176,7 +178,6 @@
     margin: 0;
 
 }
-
 
 .letterClosing h2 {
 
@@ -190,51 +191,41 @@
 
 }
 
-
 /* =========================
-   PHONE
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
 
-    .letterTitle {
-
-    font-size: 45px;
-
-    margin-bottom: 18px;
-
-    }
-
     .loveLetter {
 
-        min-height: 100vh;
-
-        padding: 70px 14px;
-
-        align-items: flex-start;
+        padding: 70px 15px;
 
     }
 
+    .letterTitle {
+
+        font-size: 38px;
+
+        margin-bottom: 25px;
+
+    }
 
     .letterPaper {
 
         width: 100%;
 
-        max-width: 420px;
+        padding: 50px 25px;
 
-        padding: 55px 25px 45px;
-
-        border-radius: 5px;
+        border-radius: 8px;
 
     }
-
 
     .letterPaper::before {
 
-        inset: 7px;
+        inset: 15px;
 
     }
-
 
     .letterDecoration {
 
@@ -242,37 +233,39 @@
 
         right: 20px;
 
-        font-size: 28px;
+        font-size: 27px;
 
     }
 
+    .letterDate {
+
+        font-size: 13px;
+
+        margin-bottom: 8px;
+
+    }
 
     .letterPaper h1 {
 
-        font-size: 40px;
+        font-size: 42px;
 
-        margin-bottom: 25px;
-
-        padding-right: 35px;
+        margin-bottom: 28px;
 
     }
-
 
     .letterBody {
 
         font-size: 18px;
 
-        line-height: 1.65;
+        line-height: 1.7;
 
     }
-
 
     .letterBody p {
 
-        margin-bottom: 20px;
+        margin-bottom: 22px;
 
     }
-
 
     .letterClosing {
 
@@ -280,17 +273,51 @@
 
     }
 
-
     .letterClosing p {
 
         font-size: 17px;
 
     }
 
-
     .letterClosing h2 {
 
         font-size: 35px;
+
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .loveLetter {
+
+        padding: 60px 10px;
+
+    }
+
+    .letterPaper {
+
+        padding: 45px 20px;
+
+    }
+
+    .letterTitle {
+
+        font-size: 34px;
+
+    }
+
+    .letterPaper h1 {
+
+        font-size: 38px;
+
+    }
+
+    .letterBody {
+
+        font-size: 17px;
+
+        line-height: 1.65;
 
     }
 
